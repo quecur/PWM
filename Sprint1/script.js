@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
   cargarComponente("navbar-container", "/componentes/navbar.html");
-  cargarComponente("login-panel", "/componentes/login_panel.html");
+  //cargarComponente("login-panel", "/componentes/login_panel.html");
   cargarComponente("footer", "/componentes/footer.html");
-  cargarComponente("Authenticity", "/componentes/Authenticity.html");
+  //cargarComponente("Authenticity", "/componentes/Authenticity.html");
+  cargarComponente("About-page", "/componentes/About.html");
+  cargarComponente("Buy", "/componentes/Buy.html");
 });
 
 function cargarComponente(id, url) {
