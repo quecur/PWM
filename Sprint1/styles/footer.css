@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    font-family: "Inter";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.ft {
+    width: 100%;
+    height: 250px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+
+.footer-col {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    list-style: none;
+    font-size: 18px;
+    display: flex;
+    justify-items: center;
+}
