@@ -32,7 +32,7 @@ header {
 .navbar {
     display: flex;
     align-items: center;
-    margin-right: 60%;
+    margin-right: 36%;
 }
 
 .navbar a{
