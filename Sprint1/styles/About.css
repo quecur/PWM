@@ -1,21 +1,161 @@
-.about-page {
-    width: 100%;
-    height: 600px;
-    display: flex;
-    position: relative;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
 }
 
-.text {
-    font-size: 20px;
-    font-weight: 500;
-    padding-left: var(--dl-space-space-sixunits);
-    padding-right: var(--dl-space-space-sixunits);
-    padding-bottom: var(--dl-space-space-twounits);
-  }
+.about-page {
+    width: 100%;
+    height: 1400px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
 
-.about-img {
-    width: 700px;
-    height: 80%;
-    margin-top: 20px;
-    object-fit: cover;
+.welcome {
+    width: 100%;
+    height: 200px;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-text {
+    font-size: 50px;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.first-step {
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.image1 {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.dunk {
+    width: 550px;
+    height: 350px;
+    margin-top: 30px;
+    margin-left: 100px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    filter:contrast(115%);
+}
+
+.texto1 {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.texto01 {
+    width: 80%;
+    margin-top: 150px;
+}
+
+.separator {
+    width: 60%;
+    height: 2px;
+    margin-left: 20%;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.second-step {
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+}
+
+.image2 {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.ad {
+    width: 550px;
+    height: 350px;
+    margin-top: 30px;
+    margin-right: 100px;
+    border-radius: 10px;
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.5);
+    filter:contrast(115%);
+}
+
+.texto2 {
+    order: -1;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.texto02 {
+    width: 80%;
+    margin-top: 150px;
+}
+
+.texto3 {
+    width: 100%;
+    height: 300px;
+    margin-top: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.texto03 {
+    width: 60%;
+    margin-top: 50px;
+}
+/*
+@keyframes colorBorder {
+    0% { border-color: red; }
+    25% { border-color: yellow; }
+    50% { border-color: green; }
+    75% { border-color: blue; }
+    100% { border-color: red; }
+}
+
+.texto01, .texto02, .texto03 {
+    border: 2px solid;
+    animation: colorBorder 8s linear infinite;
+    padding: 10px;
+    margin: 10px 0;
+}
+*/
+
+@keyframes destelloBorde {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 400% 0;
+    }
 } 
+  
+.texto1::before, .texto2::before, .texto3::before {
+    content: '';
+    position: absolute;
+    top: -2px; right: -2px; /* Ajusta para controlar la distancia del borde al texto */
+    bottom: -2px; left: -2px;
+    border-radius: 15px; /* Asegura que el borde redondeado coincida con el del texto */
+    background: linear-gradient(90deg, rgba(255,255,255,0) 50%, white 50%);
+    background-size: 400% 100%;
+    animation: destelloBorde 2s linear infinite;
+    z-index: -1;
+}
+  
+  
