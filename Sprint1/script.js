@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
   //cargarComponente("login-panel", "/componentes/login_panel.html");
   cargarComponente("footer", "/componentes/footer.html");
   //cargarComponente("Authenticity", "/componentes/Authenticity.html");
-  cargarComponente("About-page", "/componentes/About.html");
-  //cargarComponente("Buy", "/componentes/Buy.html");
+  //cargarComponente("About-page", "/componentes/About.html");
+  cargarComponente("Buy", "/componentes/Buy.html");
 });
 
 function cargarComponente(id, url) {
