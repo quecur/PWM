@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   cargarComponente("footer", "/componentes/footer.html");
   cargarComponente("Authenticity", "/componentes/Authenticity.html");
   cargarComponente("cart_item", "/componentes/cart_item.html");
+  cargarComponente("contact", "/componentes/contact.html");
 });
 
 function cargarComponente(id, url) {

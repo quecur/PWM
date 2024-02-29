@@ -34,7 +34,7 @@
 
 .authentic {
     width: 80%;
-    height: 680px;
+    
     border-radius: 10px;
 }
 .autenticidad_container{
@@ -74,4 +74,5 @@
 .texto_container2{
     text-align: center;
     padding: 20px;
+    
 }
