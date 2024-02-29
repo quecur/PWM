@@ -1,0 +1,31 @@
+.Contact_info{
+    position: relative;
+    width: 100%;
+    height: 470px;
+    
+}
+.Mail_info{
+    left:30px;
+    margin-top: 20px;
+    position: relative;
+}
+.Customer_support_info{
+    left:30px;
+    margin-top: 20px;
+    position: relative;
+}
+.Networks_info{
+    width: 100%;
+    align-items: center;
+    
+    justify-content: center;
+    left:30px;
+    margin-top: 20px;
+    position: relative;
+}
+.media-section{
+    font-size: 40px;
+    width: 33%;
+    right: 500;
+    bottom: 50;   
+}
