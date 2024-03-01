@@ -1,65 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 *{
- font-family: "Inter";
- padding: 0;
- margin: 0;
- box-sizing: border-box;
- list-style: none;
- text-decoration: none;
- scroll-padding-top: 2rem;
- scroll-behavior: smooth;
-}
-
-.logo {
-    width: 80px;
-    height: 60px;
-    margin-left: 50px;
-    margin-right: 20px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 header {
+    position: fixed;
     width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background: rgb(0,0,0);
+    box-shadow: 5px 5px 20px rgb(67, 67, 67);
+}
+
+.logo {
+    cursor: pointer;
     height: 80px;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: flex-start;
-    background: #FFFAFB;
-    box-shadow: 5px 5px 10px 0px rgb(172, 172, 172);
+    width: 100px;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    margin-right: 60%;
+.nav_links{
+    list-style: none;
 }
 
-.navbar a{
-    font-size: 20px;
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+    font-family: "Inter";
+    font-size: 22px;
     font-weight: 400;
-    color: black;
-    padding: 0.5rem 1rem;
+    text-decoration: none;
 }
 
-.navbar a:hover{
-    background: #CED4DA;
-    color: black;
-    border-radius: 2rem;
-    transition: background 0.5s;
-}
 
-.login {
+.nav_links li a{
+    transition: all 0.3s ease 0s;
     color: white;
-    background-color: black;
-    font-size: 20px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 10px;
-    margin-left: 2.5%;
-    font-weight: 300;
+    font-family: "Inter";
+    font-size: 22px;
+    font-weight: 400;
+    text-decoration: none;
 }
 
+.nav_links li a:hover{
+    color: rgba(254, 254, 254, 0.997);
+    font-weight: 700;
+}
 
+button {
+    cursor: pointer;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.cart_logo{
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.login{
+    cursor: pointer;
+}
+
+.end_log_cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
