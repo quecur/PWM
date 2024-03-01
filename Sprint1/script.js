@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
   //cargarComponente("Authenticity", "/componentes/Authenticity.html");
   //cargarComponente("cart_item", "/componentes/cart_item.html");
   //cargarComponente("About-page", "/componentes/about.html");
-  cargarComponente("Buy", "/componentes/Buy.html", function() {
+  /*cargarComponente("Buy", "/componentes/Buy.html", function() {
     inicializarSeleccionTallas();
-  });
+  });*/
 });
 
 function cargarComponente(id, url, callback) {
@@ -52,3 +52,30 @@ function changeImage(src) {
   }
 }
 
+cargarComponente("Sneaker", "/componentes/Sneaker.html", function() {
+  const productContainer = document.querySelector('.product-container');
+  const productTemplate = document.getElementById('product-template').content;
+
+  const productos = [
+      {
+          id: 1,
+          name: "Dunk Blue",
+          price: "100",
+          imageSrc: "/images/dunks/dunk_blue-removebg-preview.png"
+      },
+      {
+          id: 2,
+          name: "Dunk Green",
+          price: "110",
+          imageSrc: "/images/dunks/dunk_green-Photoroom.png-Photoroom.png"
+      }
+      // ... más productos
+  ];
+
+  productos.forEach(producto => {
+      const productClone = document.importNode(productTemplate, true);
+      productClone.querySelector('img').src = producto.imageSrc;
+      productClone.querySelector('.product-name').textContent = `${producto.name} - ${producto.price}€`;
+      productContainer.appendChild(productClone);
+  });
+});
