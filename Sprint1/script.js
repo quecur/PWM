@@ -2,13 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
   cargarComponente("navbar-container", "/componentes/navbar.html");
   //cargarComponente("login-panel", "/componentes/login_panel.html");
   cargarComponente("footer", "/componentes/footer.html");
-  //cargarComponente("Authenticity", "/componentes/Authenticity.html");
-  //cargarComponente("cart_item", "/componentes/cart_item.html");
-  //cargarComponente("About-page", "/componentes/about.html");
-  /*cargarComponente("Buy", "/componentes/Buy.html", function() {
-    inicializarSeleccionTallas();
-  });*/
+  cargarComponente("Authenticity", "/componentes/Authenticity.html");
+  cargarComponente("cart_item", "/componentes/cart_item.html");
+  cargarComponente("contact", "/componentes/contact.html");
 });
+
 
 function cargarComponente(id, url, callback) {
   fetch(url)
@@ -79,3 +77,26 @@ cargarComponente("Sneaker", "/componentes/Sneaker.html", function() {
       productContainer.appendChild(productClone);
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  cargarComponente("navbar-container", "/componentes/navbar.html");
+  //cargarComponente("login-panel", "/componentes/login_panel.html");
+  cargarComponente("footer", "/componentes/footer.html");
+  //cargarComponente("Authenticity", "/componentes/Authenticity.html");
+  cargarComponente("Home", "/componentes/Home.html");
+});
+
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+  // Obtener el contenido del template
+  const template = document.getElementById('Home');
+  const templateContent = template.content.cloneNode(true);
+
+  // Agregar el contenido clonado al contenedor en el index.html
+  const container = document.getElementById('Home');
+  container.appendChild(templateContent);
+
+  // Ahora puedes manipular el contenido del template según necesites
+  console.log(container)
+});
+

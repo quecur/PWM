@@ -1,7 +1,8 @@
-@import url(/styles/navbar.css);
 @import url(/styles/login_panel.css);
-@import url(/styles/footer.css);
-@import url(/styles/Autheticity.css);
 @import url(/styles/About.css);
 @import url(/styles/Buy.css);
 @import url(/styles/Sneaker.css);
+@import url(/styles/Authenticity.css);
+@import url(/styles/cart_item.css);
+@import url(/styles/contact.css);
+@import url(/styles/Home.css);
