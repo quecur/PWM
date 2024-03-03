@@ -1,35 +1,66 @@
-.snk-branch {
-    height: 50px;
+.snk-branchs {
+    height: auto;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 30px;
+    margin-bottom: 20px;
     display: flex;
     align-content: center;
     justify-content: center;
+    gap: 50px
 }
 
 .logo-img {
     width: auto;
-    height: 40px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.marca-seleccionada {
+    border: 2px solid #007bff; /* Cambia el color según tu esquema de diseño */
+    box-shadow: 0 0 10px rgba(0,123,255,0.5); /* Sombra ligera */
+    transform: scale(1.1); /* Un ligero aumento de tamaño */
+    transition: all 0.3s ease; /* Transición suave */
 }
 
 .navigation {
     display: flex;
-    justify-content: space-between;
+    align-content: center;
+    justify-content: center;
     padding: 1rem;
 }
 
-.navigation button,
-.navigation select {
-    padding: 0.5rem 1rem;
-    margin-right: 1rem;
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-    cursor: pointer;
+.models-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-.navigation label {
-    margin-right: 0.5rem;
+.model {
+    margin-top: 10px;
+    width: 90px;
+    height: auto;
+    cursor: pointer;
+    border: none;
+    background: #CED4DA;
+    color: black;
+    border-radius: 2rem;
+    transition: background 0.5s, box-shadow 0.3s, transform 0.3s;
+}
+
+.model:hover {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+.modelo-activo {
+    background-color: #000000;
+    color: #ffffff;
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 .product-container {
@@ -39,7 +70,7 @@
     gap: 1rem;
 }
 
-.product-card {
+.product-card-sneaker {
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -65,20 +96,6 @@
     margin-bottom: 1rem;
 }
 
-.add-to-cart {
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.add-to-cart:hover {
-    background-color: #0056b3;
-}
-
 .pagination {
     display: flex;
     justify-content: center;
@@ -88,11 +105,16 @@
 .pagination button {
     padding: 0.5rem 1rem;
     margin: 0 0.5rem;
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
+    background: none;
+    color: #000000;
     cursor: pointer;
 }
 
 .pagination button:hover {
     background-color: #e2e2e2;
+}
+
+.pagination button:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
