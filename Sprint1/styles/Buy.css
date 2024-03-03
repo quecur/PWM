@@ -16,7 +16,6 @@
     flex-direction: row;
     background-color: rgb(245, 245, 245);
     box-shadow: 5px 5px 20px rgb(67, 67, 67);
-
 }
 
 .product-img {
@@ -151,7 +150,6 @@
     color: #ffffff; /* Texto blanco */
     transform: scale(1.1); /* Ligeramente más grande */
 }
-
 
 .product-footer {
     display: flex;
