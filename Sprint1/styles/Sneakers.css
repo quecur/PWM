@@ -3,7 +3,7 @@
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -13,14 +13,6 @@
 .logo-img {
     width: auto;
     height: 38px;
-    cursor: pointer;
-}
-
-.marca-seleccionada {
-    border: 2px solid #007bff; /* Cambia el color según tu esquema de diseño */
-    box-shadow: 0 0 10px rgba(0,123,255,0.5); /* Sombra ligera */
-    transform: scale(1.1); /* Un ligero aumento de tamaño */
-    transition: all 0.3s ease; /* Transición suave */
 }
 
 .navigation {
@@ -30,70 +22,83 @@
     padding: 1rem;
 }
 
-.models-container {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.model {
-    margin-top: 10px;
-    width: 90px;
-    height: auto;
-    cursor: pointer;
-    border: none;
-    background: #CED4DA;
-    color: black;
-    border-radius: 2rem;
-    transition: background 0.5s, box-shadow 0.3s, transform 0.3s;
-}
-
-.model:hover {
-    background-color: #000000;
-    color: #ffffff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transform: translateY(-1px);
-}
-
-.modelo-activo {
-    background-color: #000000;
-    color: #ffffff;
-    transform: translateY(1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-}
-
 .product-container {
+    margin: 20px;
     padding: 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 0.5rem; /* Espacio reducido entre productos */
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px; /* Bordes redondeados para suavizar el contenedor */
 }
 
 .product-card-sneaker {
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 1rem;
+    padding: 0.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 280px;
+    margin: auto;
 }
 
-.product-image img {
-    max-width: 100%;
+.product-image-sneaker {
+    width: 100%;
     height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-bottom: 1px solid #ddd;
 }
 
+.sneaker-card {
+    max-width: 100%;
+    height: auto;
+}
+
 .snk-info {
+    width: 100%;
+    height: 120px;
+    position: relative;
     text-align: center;
     padding: 1rem 0;
 }
 
-.product-info .product-name {
+.snk-info .snk-name {
     margin-bottom: 1rem;
+}
+
+.snk-cart {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #CED4DA;
+    color: black;
+    border-radius: 2rem;
+    transition: background 0.5s, box-shadow 0.3s, transform 0.3s;
+}
+.snk-cart:hover {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+.snk-cart:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 .pagination {
