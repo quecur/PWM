@@ -1,0 +1,190 @@
+.check_out_container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.shopping_list{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    
+}
+
+.shopping_list h1{
+    padding: 30px;
+}
+
+.cart_elements{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-40%);
+    width: 80%;
+    height: 80%;
+    padding: 4%;
+    
+}
+
+.cart_item_section{
+    border: 1px solid rgb(167, 167, 167);
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 33%;
+    
+}
+
+.contenedor_imagen{
+    height: 100%;
+    width: 30%;
+    left: 0%;
+    position: absolute;
+    
+}
+
+.imagen_ejemplo{
+    max-height: 80%;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: auto;
+}
+
+.info{
+    height: 100%;
+    width: 15%;
+    
+    left: 30%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mas-menos{
+    height: 100%;
+    right: 30%;
+    position: absolute;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mas-menos button{
+    height: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.precio{
+    height: 100%;
+    
+    right: 16%;
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eliminar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 10%;
+    top: 50%;
+    right: 0;
+    position: absolute;
+    transform: translate(0%,-50%);
+    
+}
+
+.eliminar button{
+    height: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total{
+    padding: 1%;
+    right: 1%;
+    bottom: 1%;
+    position: absolute;
+}
+
+
+
+
+.imagen1{
+    width: 66%;
+}
+
+.card_details{
+    width: 40%;
+    height: 100%;
+    position: relative;
+    background-color: rgb(230, 230, 230);
+}
+
+.card_details h1 {
+    padding: 30px;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+}
+
+.form{
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);   
+}
+
+.input-text{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    align-self: center;
+    font-size: 1rem;
+    background-color: salmon;
+    border-radius: 5px;
+    text-align: center;    
+}
+
+.input-text input{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form select{
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    
+}
+
+.form select option{
+    text-align: center;
+}
+
+.form button{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(203, 89, 89);
+}
