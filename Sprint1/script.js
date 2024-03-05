@@ -192,9 +192,9 @@ function cargarProductos() {
         });
 }
 
-cargarContenido('/componentes/Navbar.html','menu')
-cargarContenido('/componentes/Home.html','body_section')
-cargarContenido('/componentes/Footer.html','footer_end')
+cargarContenido('/components/Navbar.html','menu')
+cargarContenido('/components/Home.html','body_section')
+cargarContenido('/components/Footer.html','footer_end')
 
 function scrollPageDown() {
   window.scroll({
