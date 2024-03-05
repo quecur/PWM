@@ -1,41 +1,19 @@
-document.addEventListener("DOMContentLoaded", function() {
-  cargarComponente("navbar-container", "/componentes/navbar.html");
-  cargarComponente("login-panel", "/componentes/login_panel.html");
-  cargarComponente("footer", "/componentes/footer.html");
-  cargarComponente("Authenticity", "/componentes/Authenticity.html");
-  cargarComponente("cart_item", "/componentes/cart_item.html");
-  cargarComponente("contact", "/componentes/contact.html");
-});
-
-function cargarComponente(id, url) {
+function cargarContenido(url, componente) {
   fetch(url)
       .then(response => response.text())
       .then(html => {
-          document.getElementById(id).innerHTML = html;
+          // Insertar el HTML obtenido en el div de contenido
+          document.getElementById(componente).innerHTML = html;
       })
-      .catch(error => console.error('Error al cargar el componente:', error));
+      .catch(error => console.error('Error al cargar el contenido:', error));
 }
+cargarContenido('/componentes/Navbar.html','menu')
+cargarContenido('/componentes/Home.html','body_section')
+cargarContenido('/componentes/Footer.html','footer_end')
 
-document.addEventListener("DOMContentLoaded", function() {
-  cargarComponente("navbar-container", "/componentes/navbar.html");
-  //cargarComponente("login-panel", "/componentes/login_panel.html");
-  cargarComponente("footer", "/componentes/footer.html");
-  //cargarComponente("Authenticity", "/componentes/Authenticity.html");
-  cargarComponente("Home", "/componentes/Home.html");
-});
-
-// script.js
-document.addEventListener('DOMContentLoaded', function() {
-  // Obtener el contenido del template
-  const template = document.getElementById('Home');
-  const templateContent = template.content.cloneNode(true);
-
-  // Agregar el contenido clonado al contenedor en el index.html
-  const container = document.getElementById('Home');
-  container.appendChild(templateContent);
-
-  // Ahora puedes manipular el contenido del template según necesites
-  console.log(container)
-});
-
-*/
+function scrollPageDown() {
+  window.scroll({
+      top: window.scrollY + 1000, 
+      behavior: 'smooth' 
+  });
+}
