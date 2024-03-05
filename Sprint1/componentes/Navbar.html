@@ -1,0 +1,21 @@
+
+<!-- Logo de la marca para el navbar -->
+<img src="/images/fotos/logo.jpg" alt="logo" class="logo">
+
+<!-- Navbar de la web -->
+<nav>
+    <ul class="nav_links">
+
+        <!-- Secciones del nav -->
+        <li><a id="Home-link" onclick="cargarContenido('/componentes/Home.html', 'body_section')">Home</a></li>
+        <li><a href="#" id="Sneakers-link" >Sneakers</a></li>              
+        <li><a id="Authenticity-link" onclick="cargarContenido('/componentes/Authenticity.html', 'body_section')">Authenticity</a></li>
+        <li><a id="About-link" onclick="cargarContenido('/componentes/About.html', 'body_section')">About</a></li>
+    </ul>
+</nav>
+
+<!-- Iconos de carrito y de cuenta de usuario -->
+<div class="end_log_cart">
+    <label class="cart_logo"><i class='bx bx-cart bx-tada-hover' style="font-size: 35px; color: white;"></i></label>
+    <label class="login" onclick="cargarContenido('/componentes/login_panel.html','body_section')"><i class='bx bx-user bx-tada-hover' style="font-size: 35px; color: white"></i></label>
+</div>
