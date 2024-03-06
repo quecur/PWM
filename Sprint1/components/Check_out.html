@@ -1,107 +1,189 @@
-<div class="check_out_container">
-    <div class="shopping_list">
-        <h1>Shopping List</h1>
-        <div class="cart_elements">
-            <div class=cart_item_section>
-                <div class="contenedor_imagen">
-                    <img class="imagen_ejemplo" src="/images/air-force.png" alt="">
+<div class="shopping-cart">
+    <div class="title"><h2>Your Shopping Cart</h2></div>
+    
+    <!-- Descomentar para probar
+    <div class="shopping-info">
+        <div class="products">
+            <div class="shopping-product">
+                <div class="products-images">
+                    <img src="/images/dunks/dunk4.webp" alt="Product 1" class="product-image">
+                    <div class="counter">
+                        <button class="decrementar">-</button>
+                        <span class="valor">2</span>
+                        <button class="incrementar">+</button>
+                        <button class="elim">X</button>
+                    </div>
                 </div>
-                <div class="info">
-                    <p> Airforce 1 <br>
-                    Shoes <br>
-                    Size 42 </p>
+                <div class="product-details">
+                    <h4>Product 1 Name</h4>
+                    <p>$10.00</p>
                 </div>
-                
-                <div class="mas-menos">
-                    <button type="button">-</button>   3  
-                    <button type="button">+</button>
-                </div>
-                <div class="precio">
-                    <p> 119,99$ </p>
-                </div>
-                <div class="eliminar">
-                    <button type="button">x</button>
-                </div>
-            </div> 
-            <div class=cart_item_section>
-                <div class="contenedor_imagen">
-                    <img class="imagen_ejemplo" src="/images/air-force-1-07-zapatillas-HvZlfx.png" alt="">
-                </div>
-                <div class="info">
-                    <p> Airforce 1 '07 <br>
-                    Shoes <br>
-                    Size 45 </p>
-                </div>
-                
-                <div class="mas-menos">
-                    <button type="button">-</button>   1  
-                    <button type="button">+</button>
-                </div>
-                <div class="precio">
-                    <p> 129,99$ </p>
-                </div>
-                <div class="eliminar">
-                    <button type="button">x</button>
-                </div>
-            </div> 
-            <div class=cart_item_section>
-                <div class="contenedor_imagen">
-                    <img class="imagen_ejemplo" src="/images/air-force-1-07-zapatillas-HvZlfx.png" alt="">
-                </div>
-                <div class="info">
-                    <p> Air Jordan 1 Mid SE <br>
-                    Shoes <br>
-                    Size 44 </p>
-                </div>
-                
-                <div class="mas-menos">
-                    <button type="button">-</button>   1  
-                    <button type="button">+</button>
-                </div>
-                <div class="precio">
-                    <p> 89,99$ </p>
-                </div>
-                <div class="eliminar">
-                    <button type="button">x</button>
-                </div>
-            </div>  
-        </div>
-
-        <div class ="total">
-            <h3>Total: 1000$</h3>
-        </div>
-    </div>
-    <div class="card_details">
-        <h1>Cart Details</h1>
-        
-        <div class="form">
-            <div class="card">
-                <img class="imagen1" src="/images/air-force-1-07-zapatillas-HvZlfx.png" alt="">
-            </div>
-            <div class="input-text">
-                <input type="text" placeholder="Card number" required>
-            </div>
-            <div class="input-text">
-                <input type="text" placeholder="Cardholder" required>
             </div>
             
-
-            <select name="Month" id="month" title="select">
-                <option value="" disabled selected>Month</option>
-                <option value="January">January</option>
-                <option value="February">February</option>
-            </select>
-
-            <select name="Year" id="year" title="select">
-                <option value="" disabled selected>Year</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-            </select>
-            <div class="input-text-check_out">
-                <input type="text" placeholder="Security Code" required>
+            <div class="shopping-product">
+                <div class="products-images">
+                    <img src="/images/dunks/dunk1.png" alt="Product 2" class="product-image">
+                    <div class="counter">
+                        <button class="decrementar">-</button>
+                    <span class="valor">2</span>
+                    <button class="incrementar">+</button>
+                    <button class="elim">X</button>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h4>Product 2 Name</h4>
+                    <p>$20.00</p>
+                </div>
             </div>
-            <button type="submit" class="pagar">Complete the payment</button>
+            
+            <div class="shopping-product">
+                <div class="products-images">
+                    <img src="/images/dunks/dunk1.png" alt="Product 2" class="product-image">
+                    <div class="counter">
+                        <button class="decrementar">-</button>
+                    <span class="valor">2</span>
+                    <button class="incrementar">+</button>
+                    <button class="elim">X</button>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h4>Product 2 Name</h4>
+                    <p>$20.00</p>
+                </div>
+            </div>
+
+            <div class="shopping-product">
+                <div class="products-images">
+                    <img src="/images/dunks/dunk1.png" alt="Product 2" class="product-image">
+                    <div class="counter">
+                        <button class="decrementar">-</button>
+                    <span class="valor">2</span>
+                    <button class="incrementar">+</button>
+                    <button class="elim">X</button>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h4>Product 2 Name</h4>
+                    <p>$20.00</p>
+                </div>
+            </div>
+
+            <div class="shopping-product">
+                <div class="products-images">
+                    <img src="/images/dunks/dunk1.png" alt="Product 2" class="product-image">
+                    <div class="counter">
+                        <button class="decrementar">-</button>
+                    <span class="valor">2</span>
+                    <button class="incrementar">+</button>
+                    <button class="elim">X</button>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h4>Product 2 Name</h4>
+                    <p>$20.00</p>
+                </div>
+            </div>
+
+            <div class="shopping-product">
+                <div class="products-images">
+                    <img src="/images/dunks/dunk1.png" alt="Product 2" class="product-image">
+                    <div class="counter">
+                        <button class="decrementar">-</button>
+                        <span class="valor">2</span>
+                        <button class="incrementar">+</button>
+                        <button class="elim">X</button>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h4>Product 2 Name</h4>
+                    <p>$20.00</p>
+                </div>
+            </div>
         </div>
-        
+        -->
+        <!--
+        <div class="products">
+            <template class="shopping-template">
+                <div class="shopping-product">
+                    <div class="products-images">
+                        <img src="" alt="" class="product-image">
+                        <div class="counter">
+                            <button class="decrementar">-</button>
+                            <span class="valor">2</span> 
+                            <button class="incrementar">+</button>
+                            <button class="elim">x</button>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+        -->
+        <div class="cart-summary">
+            <h3>Purchase Summary</h3>
+            <br>
+
+            <h4>Shipping and Payment Information</h4>
+
+            <form id="payment-form">
+                <div class="form-field">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-field">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                
+                <div class="form-field">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-field">
+                    <label for="payment-method">Payment Method:</label>
+                    <select id="payment-method" name="payment-method" required onclick="updatePaymentFields()">
+                        <option value="" selected disabled>Seleccione un método de pago</option>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank-transfer">Bank Transfer</option>
+                    </select>
+                </div>
+
+                <!-- Contenedor para campos de tarjeta de crédito -->
+                <div id="credit-card-fields" style="display: none;">
+                    <div class="form-field">
+                        <label for="card-number">Card Number:</label>
+                        <input type="text" id="card-number" name="card-number">
+                    </div>
+                    <div class="form-field">
+                        <label for="card-expiration">Expiration Date:</label>
+                        <input type="text" id="card-expiration" name="card-expiration" placeholder="MM/YYYY">
+                    </div>
+                    <div class="form-field">
+                        <label for="card-cvv">CVV:</label>
+                        <input type="text" id="card-cvv" name="card-cvv">
+                    </div>
+                </div>
+
+                <!-- Contenedor para PayPal -->
+                <div id="paypal-fields" style="display: none;">
+                    <div class="form-field">
+                        <label for="paypal-email">PayPal Email:</label>
+                        <input type="email" id="paypal-email" name="paypal-email">
+                    </div>
+                </div>
+
+                <!-- Contenedor para transferencia bancaria -->
+                <div id="bank-transfer-fields" style="display: none;">
+                    <div class="form-field">
+                        <label for="bank-account-number">Account Number:</label>
+                        <input type="text" id="bank-account-number" name="bank-account-number">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Place Order</button>
+            </form>
+        </div>
     </div>
 </div>
