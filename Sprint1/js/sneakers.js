@@ -1,102 +1,40 @@
-function cargarMarcasZapatillas() {
-    const marcasZapatillas = [
-        { nombre: "Nike", logo: "/images/fotos/nike.png" },
-        { nombre: "Adidas", logo: "/images/fotos/adidas.png" },
-        { nombre: "NewBalance", logo: "/images/fotos/nb_logo.png" }
-    ];
-
-    const contenedorMarcas = document.querySelector('.snk-branchs');
-    if (!contenedorMarcas) return;
-
-    marcasZapatillas.forEach(marca => {
-        const img = document.createElement('img');
-        img.src = marca.logo;
-        img.alt = marca.nombre;
-        img.className = 'logo-img';
-        img.setAttribute('data-brand', marca.nombre);
-        contenedorMarcas.appendChild(img);
-    });
+// Función para cargar las imágenes de las marcas de zapatillas
+function cargarImagenesMarcas() {
+    fetch('/json/Sneakers.json')
+        .then(res => res.json())
+        .then(data => {
+            const snkBranchs = document.querySelector('.snk-branchs');
+            data.sneakers_brands.forEach(image => {
+                snkBranchs.insertAdjacentHTML('beforeend', `<div class="brands_div"><img src="${image}"></img></div>`);
+            });
+        })
+        .catch(error => {
+            console.error('Error al cargar las imágenes de las marcas de zapatillas:', error);
+        });
 }
 
-function cargarProductos() {
-    const productos = [
-        {
-            marca: "Adidas",
-            modelo: "Ultraboost",
-            nombre: "Zapatilla Adidas Ultraboost",
-            precio: "120€",
-            imagen: "/images/dunks/dunk_cian.webp",
-            descripcion: "Descripción del producto Adidas Ultraboost."
-        },
-        {
-            marca: "Adidas",
-            modelo: "Ultraboost",
-            nombre: "Zapatilla Adidas Ultraboost",
-            precio: "120€",
-            imagen: "/images/dunks/dunk_cian.webp",
-            descripcion: "Descripción del producto Adidas Ultraboost."
-        },
-        {
-            marca: "Adidas",
-            modelo: "Ultraboost",
-            nombre: "Zapatilla Adidas Ultraboost",
-            precio: "120€",
-            imagen: "/images/dunks/dunk_cian.webp",
-            descripcion: "Descripción del producto Adidas Ultraboost."
-        },
-        {
-            marca: "Adidas",
-            modelo: "Ultraboost",
-            nombre: "Zapatilla Adidas Ultraboost",
-            precio: "120€",
-            imagen: "/images/dunks/dunk_cian.webp",
-            descripcion: "Descripción del producto Adidas Ultraboost."
-        },
-        {
-            marca: "Adidas",
-            modelo: "Ultraboost",
-            nombre: "Zapatilla Adidas Ultraboost",
-            precio: "120€",
-            imagen: "/images/dunks/dunk_cian.webp",
-            descripcion: "Descripción del producto Adidas Ultraboost."
-        },
-        {
-            marca: "Adidas",
-            modelo: "Ultraboost",
-            nombre: "Zapatilla Adidas Ultraboost",
-            precio: "120€",
-            imagen: "/images/dunks/dunk_cian.webp",
-            descripcion: "Descripción del producto Adidas Ultraboost."
-        },
-        {
-            marca: "Adidas",
-            modelo: "Ultraboost",
-            nombre: "Zapatilla Adidas Ultraboost",
-            precio: "120€",
-            imagen: "/images/dunks/dunk_cian.webp",
-            descripcion: "Descripción del producto Adidas Ultraboost."
-        },
-        {
-            marca: "Adidas",
-            modelo: "Ultraboost",
-            nombre: "Zapatilla Adidas Ultraboost",
-            precio: "120€",
-            imagen: "/images/dunks/dunk_cian.webp",
-            descripcion: "Descripción del producto Adidas Ultraboost."
-        }
-    ];    
+// Función para cargar las imágenes de los sneakers
+function cargarImagenesSneakers() {
+    fetch('/json/Sneakers.json')
+        .then(res => res.json())
+        .then(data => {
+            const snkContainer = document.getElementById("snk_container");
+            const template = document.getElementById("product-template");
 
-    const contenedorProductos = document.querySelector('.product-container');
-    const template = document.getElementById('product-template').content;
-
-    contenedorProductos.innerHTML = '';
-
-    productos
-        .forEach(producto => {
-            const clone = document.importNode(template, true);
-            clone.querySelector('.product-image-sneaker img').src = producto.imagen;
-            clone.querySelector('.product-image-sneaker img').alt = `Imagen de ${producto.nombre}`;
-            clone.querySelector('.snk-info .snk-name').textContent = `${producto.nombre} - ${producto.precio}`;
-            contenedorProductos.appendChild(clone);
+            data.sneakers_nike.forEach(sneaker => {
+                const clonedTemplate = document.importNode(template.content, true);
+                const sneakerCard = clonedTemplate.querySelector(".sneaker-card");
+                const sneakerName = clonedTemplate.querySelector(".snk-name");
+                const sneakerPrice = clonedTemplate.querySelector(".snk-price");
+                
+                sneakerCard.src = sneaker.imagen;
+                sneakerName.textContent = sneaker.nombre;
+                sneakerPrice.textContent = sneaker.precio;
+                
+                snkContainer.appendChild(clonedTemplate);
+            });
+        })
+        .catch(error => {
+            console.error('Error al cargar las imágenes de los sneakers:', error);
         });
 }
