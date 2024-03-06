@@ -1,0 +1,65 @@
+{
+    "sneakers_brands":[
+        "/images/fotos/nike.png",
+        "/images/fotos/nb_logo.png",
+        "/images/fotos/adidas.png"
+    ],
+
+    "sneakers_nike":[
+        {
+            "imagen": "/images/dunks/dunk1.png",
+            "nombre": "Nike Dunk 1",
+            "precio": "$100"
+        },
+        {
+            "imagen": "/images/dunks/dunk2.webp",
+            "nombre": "Nike Dunk 2",
+            "precio": "$100"
+        },
+        {
+            "imagen": "/images/dunks/dunk3.png",
+            "nombre": "Nike Dunk 3",
+            "precio": "$100"
+        },
+        {
+            "imagen": "/images/dunks/dunk4.webp",
+            "nombre": "Nike Dunk 4",
+            "precio": "$100"
+        },
+        {
+            "imagen": "/images/dunks/dunk5.png",
+            "nombre": "Nike Dunk 5",
+            "precio": "$100"
+        },
+        {
+            "imagen": "/images/dunks/dunk6.webp",
+            "nombre": "Nike Dunk 6",
+            "precio": "$100"
+        },
+        {
+            "imagen": "/images/dunks/dunk7.webp",
+            "nombre": "Nike Dunk 7",
+            "precio": "$100"
+        },
+        {
+            "imagen": "/images/dunks/dunk8.webp",
+            "nombre": "Nike Dunk 8",
+            "precio": "$100"
+        },
+        {
+            "imagen": "/images/dunks/dunk9.webp",
+            "nombre": "Nike Dunk 9",
+            "precio": "$100"
+        },
+        {
+            "imagen": "/images/dunks/dunk10.webp",
+            "nombre": "Nike Dunk 10",
+            "precio": "$100"
+        },
+        {
+            "imagen": "/images/dunks/dunk11.webp",
+            "nombre": "Nike Dunk 11",
+            "precio": "$100"
+        }
+    ]
+}
