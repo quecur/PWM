@@ -122,6 +122,7 @@
     margin-left: 40px;
     height: auto;
     border-left: 2px solid #ccc;
+    overflow-y: auto;
 }
 
 .form-field {
@@ -145,6 +146,16 @@
 #paypal-fields, 
 #bank-transfer-fields {
     display: none; /* Ocultos por defecto */
+}
+
+.payment-info {
+    transition: max-height 0.3s ease-in-out; /* Suaviza la transición */
+    overflow: hidden; /* Mantiene el contenido oculto si excede el tamaño del contenedor */
+    max-height: 0; /* Inicia sin mostrar contenido */
+}
+
+.payment-info.expanded {
+    max-height: 500px; /* Ajusta según el contenido máximo que puedas tener */
 }
 
 .submit-btn {
