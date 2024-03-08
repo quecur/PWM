@@ -101,16 +101,17 @@
 
 .pagination {
     display: flex;
+    height: 100px;
     justify-content: center;
     padding: 1rem;
 }
 
 .pagination button {
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
     background: none;
     color: #000000;
     cursor: pointer;
+    font-size: 20px;
+    height: 50px;
 }
 
 .pagination button:hover {
