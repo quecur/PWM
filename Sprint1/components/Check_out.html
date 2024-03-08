@@ -1,107 +1,37 @@
-<div class="check_out_container">
-    <div class="shopping_list">
-        <h1>Shopping List</h1>
-        <div class="cart_elements">
-            <div class=cart_item_section>
-                <div class="contenedor_imagen">
-                    <img class="imagen_ejemplo" src="/images/air-force.png" alt="">
-                </div>
-                <div class="info">
-                    <p> Airforce 1 <br>
-                    Shoes <br>
-                    Size 42 </p>
-                </div>
-                
-                <div class="mas-menos">
-                    <button type="button">-</button>   3  
-                    <button type="button">+</button>
-                </div>
-                <div class="precio">
-                    <p> 119,99$ </p>
-                </div>
-                <div class="eliminar">
-                    <button type="button">x</button>
-                </div>
-            </div> 
-            <div class=cart_item_section>
-                <div class="contenedor_imagen">
-                    <img class="imagen_ejemplo" src="/images/air-force-1-07-zapatillas-HvZlfx.png" alt="">
-                </div>
-                <div class="info">
-                    <p> Airforce 1 '07 <br>
-                    Shoes <br>
-                    Size 45 </p>
-                </div>
-                
-                <div class="mas-menos">
-                    <button type="button">-</button>   1  
-                    <button type="button">+</button>
-                </div>
-                <div class="precio">
-                    <p> 129,99$ </p>
-                </div>
-                <div class="eliminar">
-                    <button type="button">x</button>
-                </div>
-            </div> 
-            <div class=cart_item_section>
-                <div class="contenedor_imagen">
-                    <img class="imagen_ejemplo" src="/images/air-force-1-07-zapatillas-HvZlfx.png" alt="">
-                </div>
-                <div class="info">
-                    <p> Air Jordan 1 Mid SE <br>
-                    Shoes <br>
-                    Size 44 </p>
-                </div>
-                
-                <div class="mas-menos">
-                    <button type="button">-</button>   1  
-                    <button type="button">+</button>
-                </div>
-                <div class="precio">
-                    <p> 89,99$ </p>
-                </div>
-                <div class="eliminar">
-                    <button type="button">x</button>
-                </div>
-            </div>  
-        </div>
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Got'em</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="/styles.css">
 
-        <div class ="total">
-            <h3>Total: 1000$</h3>
-        </div>
-    </div>
-    <div class="card_details">
-        <h1>Cart Details</h1>
-        
-        <div class="form">
-            <div class="card">
-                <img class="imagen1" src="/images/air-force-1-07-zapatillas-HvZlfx.png" alt="">
-            </div>
-            <div class="input-text">
-                <input type="text" placeholder="Card number" required>
-            </div>
-            <div class="input-text">
-                <input type="text" placeholder="Cardholder" required>
-            </div>
-            
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-            <select name="Month" id="month" title="select">
-                <option value="" disabled selected>Month</option>
-                <option value="January">January</option>
-                <option value="February">February</option>
-            </select>
+    <!-- Scripts for Sneakers Section -->
+    <script src="../script.js"></script>
+    <script src="../js/check_out.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+    <header id="menu"></header>
+    <div id="body_section"></div>
+    <footer id="footer_end"></footer>
 
-            <select name="Year" id="year" title="select">
-                <option value="" disabled selected>Year</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-            </select>
-            <div class="input-text-check_out">
-                <input type="text" placeholder="Security Code" required>
-            </div>
-            <button type="submit" class="pagar">Complete the payment</button>
-        </div>
-        
-    </div>
-</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            cargarContenido('/components/Navbar.html','menu');
+            cargarContenido('/components/Checkout_temp.html','body_section')
+                .then(() => {
+                    checkout();
+                })
+                .catch(error => {
+                    console.error('Error al cargar el contenido:', error);
+                });
+            cargarContenido('/components/Footer.html','footer_end');
+        });
+    </script>
+</body>
+</html>
