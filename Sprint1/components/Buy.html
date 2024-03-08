@@ -1,41 +1,42 @@
-<div class="general">
-    <div class="product-card">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Got'em</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="../styles.css">
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-       <div class="product-img">
-         <img src="/images/dunks/dunk1.png" alt="force" class="force" id="mainImage">
-   
-         <div class="thumbnail">
-           <!-- <button id="prev"><i class="fas fa-arrow-left"></i></button> -->
-   
-           <img src="/images/dunks/dunk_green-Photoroom.png-Photoroom.png" class="force1" onclick="changeImage('/images/dunks/dunk_green-Photoroom.png-Photoroom.png')" alt="">
-           <img src="/images/dunks/dunk_blue-removebg-preview.png" class="force2" onclick="changeImage('/images/dunks/dunk_blue-removebg-preview.png')" alt="">
-   
-           <!-- <button id="next"><i class="fas fa-arrow-right"></i></button> -->
-         </div>
-       </div>
-   
-       <div class="product-info">
-         
-         <p class="shoe-name">Dunk Blue</p>
-   
-         <p class="branch">NIKE</p>
-   
-         <p class="details">The Nike Dunk Blue sneakers are a classic silhouette with a modern twist. Featuring a durable leather upper and a cushioned midsole, these sneakers provide comfort and style for everyday wear. The iconic Nike Swoosh logo adorns the sides, while the padded collar and tongue offer added support. Whether you're hitting the streets or just hanging out, these kicks will elevate your look.</p>
-   
-         <p class="size">Size (EU): Select</p>
-   
-         <template id="templateTalla">
-           <button class="btn-talla">Talla</button>
-         </template>
-         
-         <div class="tallas-contenedor"></div>
-   
-         <div class="product-footer">
-           <p class="price">500€</p>
-   
-           <button class="add-to-cart">Add to cart</button>
-         </div>
-       </div>
-         
-     </div>
-</div>
+    <!-- Scripts for Buy section-->
+    <script src="../script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</head>
+<body>
+  <!-- Navbar de la web -->
+  <header id="menu"></header>
+  <div id="body_section"></div>
+  <footer id="footer_end"></footer>
+  <script>
+        /* Función que carga los componentes del Buy.html
+        Primero se carga el header, luego el body con las funciones
+        'cargarBuy()' y 'elegirTalla()' y por último, el footer. */
+        document.addEventListener("DOMContentLoaded", function() {
+            cargarContenido('/components/Navbar.html','menu');
+            cargarContenido('/components/Buy-temp.html','body_section')
+                .then(() => {
+                    cargarBuy();
+                    elegirTalla();
+                    añadirCarrito();
+                })
+                .catch(error => {
+                    console.error('Error al cargar el contenido:', error);
+                });
+            cargarContenido('/components/Footer.html','footer_end');
+        });
+  </script>
+  <script defer src="../js/buy.js"></script>
+</body>
+</html>
