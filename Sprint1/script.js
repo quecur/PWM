@@ -5,25 +5,8 @@ function cargarContenido(url, componente) {
           document.getElementById(componente).innerHTML = html;
       })
       .catch(error => {
-          console.error('Error al cargar el contenido:', error);
+          console.error('Error al cargar el contenido: ', url, error);
           throw error; 
-      });
-}
-
-
-cargarContenido('/components/Navbar.html','menu')
-cargarContenido('/components/Home.html','body_section')
-cargarContenido('/components/Footer.html','footer_end')
-
-
-function cargarSneakers() {
-  cargarContenido('/components/Sneakers.html', 'body_section')
-      .then(() => {
-          cargarImagenesMarcas();
-          cargarImagenesSneakers();
-      })
-      .catch(error => {
-          console.error('Error al cargar sneakers:', error);
       });
 }
 
