@@ -1,39 +1,30 @@
-<!-- Sección de autenticidad -->
-<div class="authenticity_section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Got'em</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="../styles.css">
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Navbar de la web -->
+    <header id="menu"></header>
+    <div id="body_section"></div>
+    <!-- Footer de la web -->
+    <footer id="footer_end"></footer>
 
-    <!-- Texto -->
-    <div class="texto_autenticidad">
-        <h1 class="autenticidad_title">Authenticity</h1>
-        <p class="texto_autenticidad_p">
-            We can assure you that all the products available at Got'em are 100% authentic. All our products are already verified by us, before uploaded to the site. This result in all shoes in stock being "ready to ship".
-        </p>
-        <p class="texto_autenticidad_p">
-            Say goodbye to long waiting times, and receive your sneakers faster. Our team of expert authenticators uses a multi-step verification procedure that includes, but not limited to, condition, construction and packaging.
-        </p>
-    </div>
-
-    <!-- Imagen -->
-    <div class="imagen_legit">
-        <img class="authentic" src="/images/fotos/autenticas.jpg" alt="">
-    </div>
-
-    <!-- Container con características de autenticidad -->
-    <div class="autenticidad_container">
-        <div class="autenticidad_container2">
-            <h2 class="autenticidad_container2_title">Construction</h2>
-            <p class="texto_container2">Our team goes through the construction from the outside to the inside. We analyze everything from Stiching to the materials. The shoe is also checked under a black light.
-            </p>
-        </div>
-        <div class="autenticidad_container2">
-            <h2 class="autenticidad_container2_title">Condition</h2>
-            <p class="texto_container2">We look through the shoes for wear and tear, both the shoe and box is checked. We mostly sell deadstock items, but also allow the options for people to sell their used shoes at our in-store location, if we find it suitable for our store. If a shoe is used, it will affect the pricing, and you will see the tag "used".
-            </p>
-        </div>
-        <div class="autenticidad_container2">
-            <h2 class="autenticidad_container2_title">Quality Assurance</h2>
-            <p class="texto_container2">Shopping at Got'em is a quality assurance, that you shoes are 100% legit and in pristine condition. We guarantee the authenticity of each pair sold at our store.
-            </p>
-        </div>
-    </div>
-
-</div>
+    <!-- Scripts for load components and for icons -->
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            cargarContenido('/components/Navbar.html','menu')
+            cargarContenido('/components/Authenticity_temp.html','body_section');
+            cargarContenido('/components/Footer.html','footer_end')
+        });
+    </script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>
