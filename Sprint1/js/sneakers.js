@@ -13,28 +13,70 @@ function cargarImagenesMarcas() {
         });
 }
 
-// Función para cargar las imágenes de los sneakers
-function cargarImagenesSneakers() {
+let nextIndex = 12;
+function indice(){
+    nextIndex = 12;
+}
+
+// Función para cargar y mostrar las zapatillas
+function cargarZapatillas() {
     fetch('/json/Sneakers.json')
         .then(res => res.json())
         .then(data => {
-            const snkContainer = document.getElementById("snk_container");
-            const template = document.getElementById("product-template");
-
-            data.sneakers_nike.forEach(sneaker => {
-                const clonedTemplate = document.importNode(template.content, true);
-                const sneakerCard = clonedTemplate.querySelector(".sneaker-card");
-                const sneakerName = clonedTemplate.querySelector(".snk-name");
-                const sneakerPrice = clonedTemplate.querySelector(".snk-price");
-                
-                sneakerCard.src = sneaker.imagen;
-                sneakerName.textContent = sneaker.nombre;
-                sneakerPrice.textContent = sneaker.precio;
-                
-                snkContainer.appendChild(clonedTemplate);
-            });
+            const nikeSneakers = data.sneakers_nike || [];
+            const sneakersToShow = nikeSneakers.slice(nextIndex - 12, nextIndex); // Cargar el próximo lote de imágenes
+            mostrarZapatillas(sneakersToShow);
+            if (nextIndex < nikeSneakers.length) {
+                agregarBotonShowMore();
+            }else{
+                eliminarBotonShowMore();
+            }
         })
         .catch(error => {
-            console.error('Error al cargar las imágenes de los sneakers:', error);
+            console.error('Error al cargar las zapatillas de Nike:', error);
         });
+}
+
+// Función para mostrar las zapatillas en el contenedor
+function mostrarZapatillas(sneakers) {
+    const snkContainer = document.getElementById("snk_container");
+    const template = document.getElementById("product-template");
+    sneakers.forEach(sneaker => {
+        const clonedTemplate = document.importNode(template.content, true);
+        const sneakerCard = clonedTemplate.querySelector(".sneaker-card");
+        const sneakerName = clonedTemplate.querySelector(".snk-name");
+        const sneakerPrice = clonedTemplate.querySelector(".snk-price");
+        
+        sneakerCard.src = sneaker.imagen;
+        sneakerName.textContent = sneaker.nombre;
+        sneakerPrice.textContent = sneaker.precio;
+        
+        snkContainer.appendChild(clonedTemplate);
+    });
+}
+
+// Función para agregar el botón "Show more"
+function agregarBotonShowMore() {
+    const paginationContainer = document.querySelector('.pagination');
+    const buttonTemplate = document.querySelector('template#pag');
+    const clonedButton = document.importNode(buttonTemplate.content, true);
+    const showMoreButton = clonedButton.querySelector('button');
+
+    showMoreButton.textContent = `Show more`;
+
+    showMoreButton.addEventListener('click', () => {
+        nextIndex += 12; 
+        cargarZapatillas(nextIndex);
+    });
+
+    paginationContainer.appendChild(clonedButton);
+}
+
+// Función para eliminar el botón "Show more"
+function eliminarBotonShowMore(){
+    const paginationContainer = document.querySelector('.pagination');
+    const PageButton = paginationContainer.querySelector('button');
+    if (PageButton) {
+        PageButton.remove();
+    }
 }
