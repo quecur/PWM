@@ -1,3 +1,4 @@
+// Función que carga los elementos en la web
 function cargarContenido(url, componente) {
   return fetch(url)
       .then(response => response.text())

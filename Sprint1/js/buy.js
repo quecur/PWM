@@ -59,7 +59,24 @@ function añadirCarrito(){
             sessionStorage.setItem('imagen_producto', imagen);
             sessionStorage.setItem('nombre_producto', nombre);
             sessionStorage.setItem('precio_producto', precio)
-            window.location.href = '../components/Check_out.html';
+            window.location.href = '../components/checkout.html';
         }
     });
 }
+
+/* Listener para cargar los componentes del Buy.html
+Primero se carga el header, luego el body con las funciones
+'cargarBuy()' y 'elegirTalla()' y por último, el footer. */
+document.addEventListener("DOMContentLoaded", function() {
+    cargarContenido('/components/navbar.html','menu');
+    cargarContenido('/components/buy-temp.html','body_section')
+        .then(() => {
+            cargarBuy();
+            elegirTalla();
+            añadirCarrito();
+        })
+        .catch(error => {
+            console.error('Error al cargar el contenido:', error);
+        });
+    cargarContenido('/components/footer.html','footer_end');
+});

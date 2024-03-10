@@ -1,6 +1,6 @@
 // Función para cargar las imágenes de las marcas de zapatillas
 function cargarImagenesMarcas() {
-    fetch('/json/Sneakers.json')
+    fetch('/json/sneakers.json')
         .then(res => res.json())
         .then(data => {
             const snkBranchs = document.querySelector('.snk-branchs');
@@ -20,7 +20,7 @@ function indice(){
 
 // Función para cargar y mostrar las zapatillas
 function cargarZapatillas() {
-    fetch('/json/Sneakers.json')
+    fetch('/json/sneakers.json')
         .then(res => res.json())
         .then(data => {
             const nikeSneakers = data.sneakers_nike || [];
