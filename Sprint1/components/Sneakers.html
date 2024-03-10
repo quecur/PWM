@@ -27,8 +27,8 @@
         de marcas "cargarImagenesMarcas()" y las zapatillas "cargarZapatillas()". 
         Por último el footer de la web. */
         document.addEventListener("DOMContentLoaded", function() {
-            cargarContenido('/components/Navbar.html','menu');
-            cargarContenido('/components/Sneakers-temp.html','body_section')
+            cargarContenido('/components/navbar.html','menu');
+            cargarContenido('/components/sneakers-temp.html','body_section')
                 .then(() => {
                     cargarImagenesMarcas();
                     cargarZapatillas();
@@ -36,7 +36,7 @@
                 .catch(error => {
                     console.error('Error al cargar el contenido:', error);
                 });
-            cargarContenido('/components/Footer.html','footer_end');
+            cargarContenido('/components/footer.html','footer_end');
         });
 
         /* Función para capturar el clic sobre "Buy Product" y 
@@ -51,7 +51,7 @@
                 sessionStorage.setItem('nombre_producto', nombre);
                 sessionStorage.setItem('precio_producto', precio);
                 sessionStorage.setItem('imagen_producto', imagen);
-                window.location.href = 'Buy.html';
+                window.location.href = 'buy.html';
             }
         });
     </script>
