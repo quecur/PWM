@@ -1,6 +1,6 @@
 # GOT'EM
 
-## Pasos para ejecutar la web:
+## Pasos para ejecutar el proyecto web:
 
 - Clonar el repositorio
 - Abrir la capreta Sprint1 en VSCode
