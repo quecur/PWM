@@ -7,15 +7,24 @@
     <ul class="nav_links">
 
         <!-- Secciones del nav -->
-        <li><a id="Home-link" href="/index.html">Home</a></li>
-        <li><a id="Sneakers-link" href="/components/sneakers.html">Sneakers</a></li>              
-        <li><a id="Authenticity-link" href="/components/authenticity.html">Authenticity</a></li>
-        <li><a id="About-link" href="/components/about.html">About</a></li>
+        <li><a id="Home-link" href="../index.html">Home</a></li>
+        <li><a id="Sneakers-link" href="../components/Sneakers.html">Sneakers</a></li>
+        <li><a id="Authenticity-link" href="../components/Authenticity.html">Authenticity</a></li>
+        <li><a id="About-link" href="../components/About.html">About</a></li>
     </ul>
 </nav>
 
-<!-- Iconos de carrito y de cuenta de usuario -->
+<!-- Iconos de menú, carrito y de cuenta de usuario -->
 <div class="end_log_cart">
-    <a class="cart_logo" href="/components/checkout.html"><i class='bx bx-cart bx-tada-hover' style="font-size: 35px; color: white;"></i></a>
-    <label class="login" onclick="cargarContenido('/components/login.html','body_section')"><i class='bx bx-user bx-tada-hover' style="font-size: 35px; color: white"></i></label>
+    <div class="dropdown">
+        <span><i class='bx bx-menu bx-tada-hover' style="font-size: 35px; color: white;"></i></span>
+        <ul>
+            <li><a id="Home-link" href="../index.html">Home</a></li>
+            <li><a id="Sneakers-link" href="../components/Sneakers.html">Sneakers</a></li>
+            <li><a id="Authenticity-link" href="../components/Authenticity.html">Authenticity</a></li>
+            <li><a id="About-link" href="../components/About.html">About</a></li>
+        </ul>
+    </div>
+    <a class="cart_logo" href="../components/checkout.html"><i class='bx bx-cart bx-tada-hover' style="font-size: 35px; color: white;"></i></a>
+    <label class="login" onclick="cargarContenido('./login.html','body_section')"><i class='bx bx-user bx-tada-hover' style="font-size: 35px; color: white"></i></label>
 </div>
