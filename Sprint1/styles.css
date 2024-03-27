@@ -1,10 +1,11 @@
-@import url(/styles/navbar.css);
-@import url(/styles/login.css);
-@import url(/styles/footer.css);
-@import url(/styles/authenticity.css);
-@import url(/styles/checkout.css);
-@import url(/styles/home.css);
-@import url(/styles/about.css);
-@import url(/styles/forgot-password.css);
-@import url(/styles/sneakers.css);
-@import url(/styles/buy.css);
+@import url(./styles/navbar.css);
+@import url(./styles/Login.css);
+@import url(./styles/footer.css);
+@import url(./styles/authenticity.css);
+@import url(./styles/checkout.css);
+@import url(./styles/home.css);
+@import url(./styles/about.css);
+@import url(./styles/forgot-password.css);
+@import url(./styles/Sneakers.css);
+@import url(./styles/Buy.css);
+
