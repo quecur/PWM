@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Got'em</title>
     <!-- Link To CSS -->
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <!-- Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Scripts for Sneakers Section -->
-    <script src="/script.js"></script>
-    <script src="/js/sneakers.js"></script>
+    <script src="../script.js"></script>
+    <script src="../js/sneakers.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
@@ -27,16 +27,16 @@
         de marcas "cargarImagenesMarcas()" y las zapatillas "cargarZapatillas()". 
         Por último el footer de la web. */
         document.addEventListener("DOMContentLoaded", function() {
-            cargarContenido('/components/navbar.html','menu');
-            cargarContenido('/components/sneakers-temp.html','body_section')
+            cargarContenido('Navbar.html','menu');
+            cargarContenido('Sneakers-temp.html','body_section')
                 .then(() => {
                     cargarImagenesMarcas();
-                    cargarZapatillas();
+                    cargarZapatillas("nike.png");
                 })
                 .catch(error => {
                     console.error('Error al cargar el contenido:', error);
                 });
-            cargarContenido('/components/footer.html','footer_end');
+            cargarContenido('Footer.html','footer_end');
         });
 
         /* Función para capturar el clic sobre "Buy Product" y 
