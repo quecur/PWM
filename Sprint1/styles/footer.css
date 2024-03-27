@@ -19,13 +19,16 @@
 
 .ft{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    padding: 30px 200px;
+    padding: 50px 0px;
+    gap:100px;
     background-color: black;
     color: white;
-    height: 250px;
+    height: auto;
     width: 100%;
+    border: none;
 }
 
 
@@ -41,10 +44,12 @@
 
 .media-section{
     list-style: none;
+    display: flex;
 }
 
 .media-section li{
     text-decoration: none;
+    align-items: center;
     display: inline-block;
     padding: 0px 10px;
     font-size: 35px;
@@ -55,7 +60,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: column;    
+    flex-flow: column; 
 }
 
 .footer-col-media-title{
@@ -75,7 +80,9 @@
 .end{
     height: 70px;
     background-color: rgb(0, 0, 0);
+    width: 100%;
     font-size: 50px;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,5 +94,3 @@
     font-weight: 300;
     padding-left: 20px;
 }
-
-
