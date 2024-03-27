@@ -46,11 +46,11 @@ function elegirTalla() {
 para poder añadir al carro el producto. Si se añade al carro
 el producto, se almacenan la info en el sessionStorage y luego
 se carga el Check_out.html */
-function añadirCarrito(){
+function addCarrito(){
     var add = document.querySelector('.add-to-cart');
     add.addEventListener('click', function() {
         var size = document.querySelector('.size');
-        if(size.textContent == "Size (EU):"){
+        if(size.textContent === "Size (EU):"){
             alert("Por favor, seleccione una talla");
         }else{
             var imagen = sessionStorage.getItem('imagen_producto');
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(() => {
             cargarBuy();
             elegirTalla();
-            añadirCarrito();
+            addCarrito();
         })
         .catch(error => {
             console.error('Error al cargar el contenido:', error);

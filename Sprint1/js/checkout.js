@@ -36,9 +36,7 @@ function checkout(){
     var nombre = sessionStorage.getItem('nombre_producto');
     var precio = sessionStorage.getItem('precio_producto');
 
-    if(imagen == null){
-        console.log("Carrito vacío");
-    }else{
+    if(imagen != null){
         var template = document.getElementById('Checkout_temp').content.cloneNode(true);
         var imgElement = template.querySelector('.product-image');
         var nameTemplate = template.querySelector('.product-details h4');
@@ -56,13 +54,13 @@ function checkout(){
 
 // Listener que carga los componentes del Checkout
 document.addEventListener("DOMContentLoaded", function() {
-    cargarContenido('/components/navbar.html','menu');
-    cargarContenido('/components/checkout-temp.html','body_section')
+    cargarContenido('../components/Navbar.html','menu');
+    cargarContenido('../components/checkout-temp.html','body_section')
         .then(() => {
             checkout();
         })
         .catch(error => {
             console.error('Error al cargar el contenido:', error);
         });
-    cargarContenido('/components/footer.html','footer_end');
+    cargarContenido('../components/Footer.html','footer_end');
 });
