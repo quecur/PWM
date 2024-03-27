@@ -122,3 +122,41 @@
     transform: translateY(1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
+
+/* Adaptaciones para tabletas (menos de 1600px) */
+@media(max-width: 1600px) {
+    .snk_container {
+        grid-template-columns: repeat(2, 1fr); /* Muestra menos columnas en tabletas */
+    }
+    .product-card-sneaker, .brands_div {
+        width: 80%; /* Ajusta el ancho para una mejor visualización */
+        height: auto; /* Altura auto para mantener proporciones */
+    }
+    .snk-info, .snk-cart {
+        padding: 0.5rem; /* Ajusta el padding para espacios más pequeños */
+    }
+}
+
+/* Adaptaciones para dispositivos móviles grandes (menos de 991px) */
+@media(max-width: 991px) {
+    .snk_container {
+        grid-template-columns: 1fr; /* Solo una columna para móviles grandes */
+    }
+    .product-card-sneaker {
+        height: auto; /* Altura automática para ajustarse al contenido */
+    }
+    .snk-info .snk-name, .snk-cart {
+        font-size: smaller; /* Texto más pequeño para ajustarse a pantallas más pequeñas */
+    }
+}
+
+/* Adaptaciones para dispositivos móviles pequeños (menos de 479px) */
+@media(max-width: 479px) {
+    .snk-branchs, .brands_div {
+        padding: 10px; /* Reduce el padding */
+        gap: 20px; /* Menor espacio entre elementos */
+    }
+    .snk-info, .snk-cart {
+        font-size: smaller; /* Ajusta el tamaño del texto aún más */
+    }
+}
