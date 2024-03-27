@@ -7,8 +7,8 @@
 
     "sneakers_nike":[
         {
-            "imagen": "/images/dunks/dunk1.png",
-            "nombre": "Nike Dunk 1",
+            "imagen": "/images/dunks/dunk1.webp",
+            "nombre": "Nike Jordan Low 1",
             "precio": "$140"
         },
         {
@@ -27,13 +27,13 @@
             "precio": "$100"
         },
         {
-            "imagen": "/images/dunks/dunk5.png",
-            "nombre": "Nike Dunk 5",
+            "imagen": "/images/dunks/dunk5.webp",
+            "nombre": "Nike Jordan Low 2",
             "precio": "$120"
         },
         {
             "imagen": "/images/dunks/dunk6.webp",
-            "nombre": "Nike Dunk 6",
+            "nombre": "Nike Jordan Low 3",
             "precio": "$130"
         },
         {
@@ -73,28 +73,51 @@
         },
         {
             "imagen": "/images/dunks/dunk14.webp",
-            "nombre": "Nike Dunk 14",
+            "nombre": "Nike Jordan Low 4",
             "precio": "$100"
         },
         {
             "imagen": "/images/dunks/dunk15.webp",
-            "nombre": "Nike Dunk 15",
+            "nombre": "Nike Jordan Low 5",
             "precio": "$100"
         },
         {
             "imagen": "/images/dunks/dunk16.webp",
-            "nombre": "Nike Dunk 16",
+            "nombre": "Nike Jordan Low 6",
             "precio": "$100"
         },
         {
             "imagen": "/images/dunks/dunk17.webp",
-            "nombre": "Nike Dunk 17",
+            "nombre": "Nike Jordan Low 7",
             "precio": "$100"
         },
         {
             "imagen": "/images/dunks/dunk18.webp",
-            "nombre": "Nike Dunk 18",
+            "nombre": "Nike Jordan Low 8",
             "precio": "$100"
         }    
+    ],
+
+    "sneakers_adidas": [
+        {
+            "imagen":"/images/Gazelle/gazelle1.avif",
+            "nombre": "Gazelle 1",
+            "precio": "$90"
+        },
+        {
+            "imagen":"/images/Gazelle/gazelle2.avif",
+            "nombre": "Gazelle 2",
+            "precio": "$90"
+        },
+        {
+            "imagen":"/images/Gazelle/gazelle3.avif",
+            "nombre": "Gazelle 3",
+            "precio": "$90"
+        },
+        {
+            "imagen":"/images/Gazelle/gazelle4.avif",
+            "nombre": "Gazelle 4",
+            "precio": "$90"
+        }
     ]
 }
