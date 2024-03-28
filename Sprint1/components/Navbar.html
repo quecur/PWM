@@ -17,8 +17,8 @@
 <!-- Iconos de menú, carrito y de cuenta de usuario -->
 <div class="end_log_cart">
     <div class="dropdown" id="menuDropdown">
-        <span onclick="toggleMenu()" ontouchstart="toggleMenu()"><i class='bx bx-menu bx-tada-hover' style="font-size: 35px; color: white;"></i></span>
-        <ul>
+        <span onmousedown="toggleMenu()" ontouchstart="toggleMenu()"><i class='bx bx-menu bx-tada-hover' style="font-size: 35px; color: white;"></i></span>
+        <ul id="menuList">
             <li><a id="Home-link" href="../index.html">Home</a></li>
             <li><a id="Sneakers-link" href="../components/Sneakers.html">Sneakers</a></li>
             <li><a id="Authenticity-link" href="../components/Authenticity.html">Authenticity</a></li>
@@ -28,3 +28,4 @@
     <a class="cart_logo" href="../components/checkout.html"><i class='bx bx-cart bx-tada-hover' style="font-size: 35px; color: white;"></i></a>
     <label class="login" onclick="cargarContenido('../components/login.html','body_section')"><i class='bx bx-user bx-tada-hover' style="font-size: 35px; color: white"></i></label>
 </div>
+<script src="../js/menu.js"></script>
