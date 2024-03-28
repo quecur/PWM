@@ -83,56 +83,53 @@ button {
     justify-content: center;
     align-items: center;
 }
-
-
-.dropdown {
+.dropdown{
     display: none;
-    position: relative;
-    margin-right: 35px;
-    z-index: 1; /* Ajusta el z-index según sea necesario */
-    cursor: pointer;
+    margin-right: 30px;
 }
 
-.dropdown ul {
+#menuList {
+    display: none;
+}
+
+#menuList.show {
+    display: block;
+}
+
+#menuDropdown {
+    position: relative;
+    z-index: 9999;
+}
+
+#menuList {
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    width: 200px; /* Ancho del dropdown */
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background-color: black;
-    padding: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 150px; /* Ancho del menú desplegable */
+    background-color: black; /* Color de fondo */
+    border: none;
+    border-radius: 5px; /* Borde redondeado */
 }
 
-.dropdown ul li {
-    margin: 10px 0;
-}
-
-.dropdown ul li a {
+#menuList.show {
     display: block;
-    padding: 5px 20px;
+}
+
+#menuList li {
+    list-style: none; /* Quitar viñetas de la lista */
+    padding: 10px; /* Espaciado interno */
+}
+
+#menuList li a {
+    display: block; /* Hacer enlaces de lista bloque para ocupar todo el ancho */
+    text-decoration: none; /* Quitar subrayado de enlaces */
     color: white;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Transición de color de fondo */
 }
 
-.dropdown ul li a:hover {
-    background-color: #333; /* Color de fondo al pasar el ratón */
-}
-
-/* Cambia el ícono cuando el dropdown está abierto */
-.dropdown:hover ul,
-.dropdown ul:hover {
-    max-height: 200px; /* Altura máxima del dropdown */
-}
-
-.dropdown:hover i,
-.dropdown:hover ul i,
-.dropdown ul:hover i {
-    transform: rotate(180deg); /* Rotación del icono al abrir el dropdown */
+#menuList li a:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el ratón */
 }
 
 @media only screen and (max-width: 950px) {
@@ -143,4 +140,6 @@ button {
     .dropdown{
         display: flex;
     }
+    
+    
 }
