@@ -113,3 +113,11 @@
 .register-link p a:hover{
     text-decoration: underline;
 }
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #bf4638;
+    padding-bottom: 20px;
+}
