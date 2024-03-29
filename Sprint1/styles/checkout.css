@@ -6,8 +6,8 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column; /* Asegura la disposición en fila */
-    align-items: flex-start; /* Alinea los elementos al inicio, útil si tienen diferentes alturas */
+    flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
 }
 
@@ -17,7 +17,7 @@
 
 .shopping-info {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
     width: 100%;
     height: 600px;
@@ -28,33 +28,33 @@
 }
 
 .products {
-    height: 100%; /* Ajusta la altura según sea necesario */
+    height: 100%;
     width: 40%;
-    overflow-y: auto; /* Habilita el desplazamiento vertical para la lista de productos */
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .shopping-product {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px; /* Espacio entre productos */
+    margin-bottom: 20px;
 }
 
 .products-images {
     height: 200px;
     display: flex;
-    align-items: center; /* Alinea verticalmente la imagen y los controles del contador */
-    justify-content: start; /* Comienza los elementos al inicio del contenedor */
+    align-items: center;
+    justify-content: start;
 }
 
 .product-image {
-    width: 300px; /* Ajusta según necesites */
+    width: 300px;
     height: auto;
-    margin-right: 75px; /* Espacio entre la imagen y el contador */
+    margin-right: 75px;
 }
 
-/* Estilos para los botones y el valor del contador */
 .decrementar, .incrementar, .elim {
     padding: 5px 10px;
     font-size: 16px;
@@ -63,12 +63,12 @@
     border: none;
     cursor: pointer;
     border-radius: 4px;
-    margin: 0 5px; /* Ajusta el espaciado entre botones si es necesario */
+    margin: 0 5px;
 }
 
 .valor {
     font-size: 16px;
-    margin: 0 10px; /* Espacio entre botones de decrementar e incrementar */
+    margin: 0 10px;
 }
 
 
@@ -88,7 +88,7 @@
 .product-details {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 300px;
     font-size: 20px;
 }
 
@@ -99,7 +99,6 @@
 .cart-summary {
     padding: 20px;
     width: 30%;
-    margin-left: 40px;
     height: auto;
     border-left: 2px solid #ccc;
     overflow-y: auto;
@@ -125,17 +124,17 @@
 #credit-card-fields, 
 #paypal-fields, 
 #bank-transfer-fields {
-    display: none; /* Ocultos por defecto */
+    display: none;
 }
 
 .payment-info {
-    transition: max-height 0.3s ease-in-out; /* Suaviza la transición */
-    overflow: hidden; /* Mantiene el contenido oculto si excede el tamaño del contenedor */
-    max-height: 0; /* Inicia sin mostrar contenido */
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
 }
 
 .payment-info.expanded {
-    max-height: 500px; /* Ajusta según el contenido máximo que puedas tener */
+    max-height: 500px;
 }
 
 .submit-btn {
@@ -152,4 +151,63 @@
 
 .submit-btn:hover {
     background-color: #218838;
+}
+
+@media (max-width: 850px) {
+    .shopping-cart {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shopping-info {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .products {
+        width: 100%;
+    }
+
+    .cart-summary {
+        width: 100%;
+        margin-left: 0;
+        border-left: none;
+        border-top: 2px solid #ccc;
+        padding-top: 20px;
+    }
+
+    .product-image {
+        width: 30%px;
+        height: auto;
+        margin-right: 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .shopping-product {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .products-images {
+        width: 100px;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .shopping-product h2, .shopping-product p {
+        font-size: 12px;
+    }
+
+    .decrementar, .incrementar, .elim {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    .valor {
+        font-size: 12px;
+    }
 }
