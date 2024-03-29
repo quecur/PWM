@@ -11,6 +11,20 @@ function cargarContenido(url, componente) {
       });
 }
 
+function pageChange(direction){
+    switch(direction){
+        case "nike.png":
+            window.location.href = "../components/Sneakers.html";
+            break;
+        case "nb_logo.png":
+            window.location.href = "../components/Sneakers2.html";
+            break;
+        case "adidas.png":
+            window.location.href = "../components/Sneakers3.html";
+            break;
+    }
+}
+
 // Función para la animación de la página de home
 function scrollPageDown() {
   window.scroll({

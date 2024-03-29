@@ -100,24 +100,102 @@
 
     "sneakers_adidas": [
         {
-            "imagen":"/images/Gazelle/gazelle1.avif",
+            "imagen":"/images/Gazelle/Adidas gazelle 1.webp",
             "nombre": "Gazelle 1",
             "precio": "$90"
         },
         {
-            "imagen":"/images/Gazelle/gazelle2.avif",
+            "imagen":"/images/Gazelle/Adidas gazelle 2.webp",
             "nombre": "Gazelle 2",
             "precio": "$90"
         },
         {
-            "imagen":"/images/Gazelle/gazelle3.avif",
+            "imagen":"/images/Gazelle/Adidas gazelle 3.webp",
             "nombre": "Gazelle 3",
             "precio": "$90"
         },
         {
-            "imagen":"/images/Gazelle/gazelle4.avif",
+            "imagen":"/images/Gazelle/Adidas gazelle 4.webp",
             "nombre": "Gazelle 4",
             "precio": "$90"
+        },
+        {
+            "imagen":"/images/Gazelle/Adidas samba 1.webp",
+            "nombre": "Samba 1",
+            "precio": "$90"
+        },
+        {
+            "imagen":"/images/Gazelle/Adidas samba 2.webp",
+            "nombre": "samba 2",
+            "precio": "$90"
+        },
+        {
+            "imagen":"/images/Gazelle/Adidas samba 3.webp",
+            "nombre": "samba 3",
+            "precio": "$90"
+        },
+        {
+            "imagen":"/images/Gazelle/Adidas forum Bad Bunny.webp",
+            "nombre": "Forum Bad Bunny",
+            "precio": "$445"
+        },
+        {
+            "imagen":"/images/Gazelle/Adidas forum Bad Bunny 2.webp",
+            "nombre": "Forum Bad Bunny 2",
+            "precio": "$300"
+        }
+    ],
+
+    "sneakers_nb": [
+        {
+            "imagen":"/images/Nb/New Balance 550 1.webp",
+            "nombre": "New Balance 550 1",
+            "precio": "$100"
+        },
+        {
+            "imagen":"/images/Nb/New Balance 550 2.webp",
+            "nombre": "New Balance 550 2",
+            "precio": "$100"
+        },
+        {
+            "imagen":"/images/Nb/New Balance 550 3.webp",
+            "nombre": "New Balance 550 3",
+            "precio": "$100"
+        },
+        {
+            "imagen":"/images/Nb/New Balance 1906D 1.webp",
+            "nombre": "New Balance 1906D 1",
+            "precio": "$200"
+        },
+        {
+            "imagen":"/images/Nb/New Balance 1906D 2.webp",
+            "nombre": "New Balance 1906D 2",
+            "precio": "$200"
+        },
+        {
+            "imagen":"/images/Nb/New Balance 1906D 3.webp",
+            "nombre": "New Balance 1906D 3",
+            "precio": "$200"
+        },
+        {
+            "imagen":"/images/Nb/New Balance 2002R 1.webp",
+            "nombre": "New Balance 2002R 1",
+            "precio": "$180"
+        },
+        {
+            "imagen":"/images/Nb/New Balance 2002R 2.webp",
+            "nombre": "New Balance 2002R 2",
+            "precio": "$180"
+        },
+        {
+            "imagen":"/images/Nb/New Balance 2002R 3.webp",
+            "nombre": "New Balance 2002R 3",
+            "precio": "$180"
+        },
+        {
+            "imagen":"/images/Nb/New Balance 2002R 4.webp",
+            "nombre": "New Balance 2002R 4",
+            "precio": "$180"
         }
     ]
 }

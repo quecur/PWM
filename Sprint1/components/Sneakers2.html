@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Got'em</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="../styles.css">
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Scripts for Sneakers Section -->
+    <script src="../script.js"></script>
+    <script src="../js/sneakers.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+    <header id="menu"></header>
+    <div id="body_section"></div>
+    <footer id="footer_end"></footer>
+
+    <!-- Scripts para sneakers -->
+    <script>
+
+        /* Función para cargar los componentes de la sección de Sneakers.
+        Primero se carga el header y luego el cuerpo con el panel de selección
+        de marcas "cargarImagenesMarcas()" y las zapatillas "cargarZapatillas()". 
+        Por último el footer de la web. */
+        document.addEventListener("DOMContentLoaded", function() {
+            cargarContenido('Navbar.html','menu');
+            cargarContenido('Sneakers-temp.html','body_section')
+                .then(() => {
+                    cargarImagenesMarcas();
+                    cargarZapatillas("nb_logo.png");
+                })
+                .catch(error => {
+                    console.error('Error al cargar el contenido:', error);
+                });
+            cargarContenido('Footer.html','footer_end');
+        });
+
+        /* Función para capturar el clic sobre "Buy Product" y 
+         almacenar los datos de la zapa seleccionada en el SessionStorage.
+         Luego, redirección al Buy.html */
+        document.body.addEventListener('click', function(event) {
+            if (event.target && event.target.classList.contains('snk-cart')) {
+                var card = event.target.closest('.product-card-sneaker');
+                var nombre = card.querySelector('.snk-name').textContent;
+                var precio = card.querySelector('.snk-price').textContent;
+                var imagen = card.querySelector('.sneaker-card').src;
+                sessionStorage.setItem('nombre_producto', nombre);
+                sessionStorage.setItem('precio_producto', precio);
+                sessionStorage.setItem('imagen_producto', imagen);
+                window.location.href = 'buy.html';
+            }
+        });
+    </script>
+</body>
+</html>

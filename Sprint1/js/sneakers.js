@@ -6,21 +6,13 @@ function cargarImagenesMarcas() {
             const snkBranchs = document.querySelector('.snk-branchs');
             data.sneakers_brands.forEach(image => {
                 const marca = image.split("/")[3];
-                snkBranchs.insertAdjacentHTML('beforeend', `<div class="brands_div"><img src="${image}" onclick="cargarZapatillas('${marca}')"></img></div>`);
+                snkBranchs.insertAdjacentHTML('beforeend', `<div class="brands_div"><img src="${image}" onclick="pageChange('${marca}')"></img></div>`);
             });
         })
         .catch(error => {
             console.error('Error al cargar las imágenes de las marcas de zapatillas:', error);
         });
 }
-
-function limpiarContenido() {
-    const snkContainer = document.getElementById("snk_container");
-    const template = document.getElementById("product-template").content.cloneNode(true); // Clonar el template
-    console.log(template);
-    snkContainer.innerHTML = ''; // Limpiar el contenido del contenedor
-}
-
 
 // Función para cargar y mostrar las zapatillas
 function cargarZapatillas(image) {
@@ -34,6 +26,8 @@ function cargarZapatillas(image) {
                     mostrarZapatillas(nikeSneakers);
                     break;
                 case "nb_logo.png":
+                    const  nbSneakers = data.sneakers_nb || [];
+                    mostrarZapatillas(nbSneakers);
                     break;
                 case "adidas.png":
                     const adidasSneakers = data.sneakers_adidas || [];
@@ -42,7 +36,7 @@ function cargarZapatillas(image) {
             }
         })
         .catch(error => {
-            console.error('Error al cargar las zapatillas de Nike:', error);
+            console.error('Error al cargar las zapatillas:', error);
         });
 }
 
@@ -50,7 +44,6 @@ function cargarZapatillas(image) {
 function mostrarZapatillas(sneakers) {
     const snkContainer = document.getElementById("snk_container");
     const template = document.getElementById("product-template");
-    snkContainer.childNodes.forEach(child => child.remove());
     sneakers.forEach(sneaker => {
         const clonedTemplate = document.importNode(template.content, true);
         const sneakerCard = clonedTemplate.querySelector(".sneaker-card");
@@ -63,30 +56,4 @@ function mostrarZapatillas(sneakers) {
         
         snkContainer.appendChild(clonedTemplate);
     });
-}
-
-// Función para agregar el botón "Show more"
-function agregarBotonShowMore() {
-    const paginationContainer = document.querySelector('.pagination');
-    const buttonTemplate = document.querySelector('template#pag');
-    const clonedButton = document.importNode(buttonTemplate.content, true);
-    const showMoreButton = clonedButton.querySelector('button');
-
-    showMoreButton.textContent = `Show more`;
-
-    showMoreButton.addEventListener('click', () => {
-        nextIndex += 12; 
-        cargarZapatillas(nextIndex);
-    });
-
-    paginationContainer.appendChild(clonedButton);
-}
-
-// Función para eliminar el botón "Show more"
-function eliminarBotonShowMore(){
-    const paginationContainer = document.querySelector('.pagination');
-    const PageButton = paginationContainer.querySelector('button');
-    if (PageButton) {
-        PageButton.remove();
-    }
 }
