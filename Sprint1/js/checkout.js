@@ -62,5 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => {
             console.error('Error al cargar el contenido:', error);
         });
-    cargarContenido('../components/Footer.html','footer_end');
+    cargarContenido('../components/Footer.html','footer_end', function(){
+        verificarEstadoInicioSesion();
+    });
 });
