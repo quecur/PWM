@@ -6,54 +6,29 @@
     <title>Got'em</title>
     <!-- Link To CSS -->
     <link rel="stylesheet" href="../styles.css">
-
     <!-- Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- Scripts for Checkout Section -->
-    <script src="../script.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
-    <!-- Panel de login -->
-    <section class="container">
-        <div class="wrapper">
-            <form action="" class="form" method="POST" id="form">
-                <!-- Título del panel -->
-                <h1>Register</h1>
+    <!-- Navbar de la web -->
+    <header id="menu"></header>
+    <div id="body_section"></div>
+    <!-- Footer de la web -->
+    <footer id="footer_end"></footer>
 
-                <!-- Input del username -->
-                <div class="input_box">
-                    <input type="text" id="userName" placeholder="Username" required>
-                    <i class='bx bxs-user' ></i>
-                </div>            
-
-                <!-- Input del email -->
-                <div class="input_box">
-                    <input type="text" id= mail placeholder="Email address" required>
-                    <i class='bx bx-envelope' ></i>
-                </div>
-
-                <!-- Input de password -->
-                <div class="input_box">
-                    <input type="password" id="password" placeholder="Password" required>
-                    <i class='bx bxs-lock-alt' ></i>
-                </div>
-
-                <!-- Input de password -->
-                <div class="input_box">
-                    <input type="password" id="confirmPassword" placeholder="Confirm password" required>
-                    <i class='bx bxs-lock-alt' ></i>
-                </div>
-
-
-                <!-- Botón de sign in -->
-                <p class="warnings" id="warnings"></p>
-                <button type="submit" class="btn">Sign in</button>
-                
-            </form>
-        </div>
-    </section>
+    <!-- Scripts for load components -->
+    <script src="../js/menu.js"></script>
+    <script src="../script.js"></script>
     <script src="../js/register.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            cargarContenido('../components/Navbar.html','menu');
+            cargarContenido('../components/register-temp.html','body_section');
+            cargarContenido('../components/Footer.html','footer_end', function() {
+                validarFormulario(); // Llamar a la función después de que se cargue el formulario
+                verificarEstadoInicioSesion();
+        })});
+    </script>
 </body>
 </html>

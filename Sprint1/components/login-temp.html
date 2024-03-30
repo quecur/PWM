@@ -1,0 +1,38 @@
+<!-- Panel de login -->
+<section class="container">
+    <div class="wrapper">
+        <form action="" class="form" id="loginForm">
+            <!-- Título del panel -->
+            <h1>Login</h1>
+
+            <!-- Input del username -->
+            <div class="input_box">
+                <input type="text" placeholder="Username or Email" id="mail" required>
+                <i class='bx bxs-user' ></i>
+            </div>
+
+            <!-- Input de password -->
+            <div class="input_box">
+                <input type="password" placeholder="Password" id="password" required>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+
+            <!-- Recordar u olvidar contraseña -->
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="./forgot-password.html">Forgot password?</a>
+            </div>
+            
+            <!-- Botón de login -->
+            <p class="warnings" id="warnings"></p>
+            <button type="submit" class="btn">Login</button>
+
+            <!-- Link de registro -->
+            <div class="register-link">
+                <p>Don't have an account?
+                    <a href="../components/Register.html" >Register</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</section>

@@ -37,7 +37,9 @@
                 .catch(error => {
                     console.error('Error al cargar el contenido:', error);
                 });
-            cargarContenido('Footer.html','footer_end');
+            cargarContenido('Footer.html','footer_end', function(){
+                verificarEstadoInicioSesion();
+            });
         });
 
         /* Función para capturar el clic sobre "Buy Product" y 
