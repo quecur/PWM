@@ -10,7 +10,7 @@
 ### En WebStorm
 - Descargar el zip desde el repositorio
 - Descomprimir y abrir la carpeta Sprint1 en WebStorm
-- Ejecutar usando un navegador
+- Abrir archivo index.html y ejecutar usando un navegador
   
 ## Enlace de la página web
 
