@@ -3,7 +3,7 @@
 
 .home_intro{
     height:1000px;
-    background-image: url(/images/fotos/home.jpg);
+    /*background-image: url(/images/fotos/home.jpg);*/
     background-position: center;
     background-size: cover;
 }

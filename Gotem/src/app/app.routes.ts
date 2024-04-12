@@ -1,8 +1,7 @@
 
-import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';  // Asegúrate de ajustar la ruta según sea necesario
+import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }  // Redirige la ruta raíz a Home
+  {path: '', loadComponent: ()=>import('./navbar/navbar.component').then(m => m.NavbarComponent)},
+  {path: 'home', loadComponent: ()=>import('./home/home.component').then(m => m.HomeComponent)}
 ];
