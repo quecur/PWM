@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+
+<div id="body_section">
+    <!-- Body de Sneakers con template -->
+    <div *ngFor="let sneaker of sneakers" class="snk_container" id="snk_container">
+        <div class="product-card-sneaker" id="card_sneaker_{{sneaker.id}}">
+            <div class="product-image-sneaker">
+                <img [src]="sneaker.image" alt="Imagen del producto" class="sneaker-card">
+            </div>
+            <div class="snk-info">
+                <p class="snk-name">{{sneaker.name}}</p>
+                <p class="snk-price">{{sneaker.price}}</p>
+                <button class="snk-cart" id="snk-cart">Buy Product</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
