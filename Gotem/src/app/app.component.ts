@@ -11,7 +11,7 @@ import { RouterOutlet } from '@angular/router';
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    imports: [NavbarComponent,FooterComponent, HomeComponent, AuthenticityComponent, AboutComponent, RouterOutlet]
+    imports: [RouterOutlet]
 })
 export class AppComponent {
   title = 'GOTEM';
