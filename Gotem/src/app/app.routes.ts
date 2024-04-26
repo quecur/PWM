@@ -1,12 +1,13 @@
 
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { SneakersComponent } from './components/sneakers/sneakers.component';
-import { AuthenticityComponent } from './components/authenticity/authenticity.component';
-import { AboutComponent } from './components/about/about.component';
-import { BuyComponent } from './components/buy/buy.component';
-import { CartComponent } from './components/cart/cart.component';
-import { LoginComponent } from './components/login/login.component';
+import {HomeComponent} from './home/home.component';
+import { SneakersComponent } from './sneakers/sneakers.component';
+import { AuthenticityComponent } from './authenticity/authenticity.component';
+import { AboutComponent } from './about/about.component';
+import { BuyComponent } from './buy/buy.component';
+import { CartComponent } from './cart/cart.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 export const routes: Routes = [
@@ -17,5 +18,6 @@ export const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'buy', component: BuyComponent},
   {path: 'cart', component: CartComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent}
 ];
