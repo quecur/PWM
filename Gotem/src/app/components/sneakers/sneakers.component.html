@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="filter">
+    @for(brand of brands; track brand){
+        <div class="brand" (click)="changeBrand(brand)">
+            <img [src]="brand.img" alt="" class="brand_img">
+        </div>
+    }
+</div>
+<div id="body_section">
+    <!-- Body de Sneakers con template -->
+    <div class="snk_container" id="snk_container">
+        @for(sneaker of sneakers; track sneaker){
+            <div class="product-card-sneaker" id="card_sneaker">
+                <div class="product-image-sneaker">
+                    <img [src]="sneaker.image" alt="Imagen del producto" class="sneaker-card">
+                </div>
+                <div class="snk-info">
+                    <p class="snk-name">{{sneaker.name}}</p>
+                    <p class="snk-price">{{sneaker.price}}</p>
+                    <button class="snk-cart" id="snk-cart">Buy Product</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<app-footer></app-footer>

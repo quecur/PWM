@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+.snk-branchs {
+    height: auto;
+    display: flex;
+    padding: 20px;
+    align-content: center;
+    justify-content: center;
+    gap: 50px;
+    box-shadow: 5px 5px 10px rgb(117, 116, 116);
+    margin-bottom: 50px;
+}
+
+.brands_div{
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brands_div img{
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+
+.snk_container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
+    margin-bottom: 100px;
+}
+.product-card-sneaker {
+    background-color: #ffffff;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin: auto;
+    height: 90%;
+}
+
+.product-image-sneaker {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #b3b3b3;
+}
+
+.sneaker-card {
+    max-width: 100%;
+    object-fit: contain;
+    max-height: 100%;
+}
+
+.snk-info {
+    width: 100%;
+    height: 160px;
+    position: relative;
+    text-align: center;
+    padding: 1rem 0;
+    font-family: "Inter";
+}
+
+.snk-info .snk-name {
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.snk-cart {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Inter";
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #CED4DA;
+    color: black;
+    border-radius: 2rem;
+    transition: background 0.5s, box-shadow 0.3s, transform 0.3s;
+}
+.snk-cart:hover {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+.snk-cart:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.filter{
+    height: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand_img{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+}
+.brand{
+    height: 90px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px 0 20px;
+}
