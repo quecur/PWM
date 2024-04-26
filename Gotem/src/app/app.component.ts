@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from "./navbar/navbar.component";
-import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
-import { AuthenticityComponent } from './authenticity/authenticity.component';
-import { AboutComponent } from './about/about.component';
+import { NavbarComponent } from "./components/navbar/navbar.component";
+import { HomeComponent } from './components/home/home.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AuthenticityComponent } from './components/authenticity/authenticity.component';
+import { AboutComponent } from './components/about/about.component';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
