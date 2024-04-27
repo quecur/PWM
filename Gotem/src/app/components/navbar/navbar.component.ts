@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent{
+  menuVisible: boolean = false;
+
+  toggleMenu(): void {
+    this.menuVisible = !this.menuVisible;
+  }
 }

@@ -134,13 +134,27 @@ button {
 }
 
 @media only screen and (max-width: 950px) {
-    .nav_links{
-        display: none;
+    .nav_links {
+        display: none; /* Oculta los enlaces de navegación en dispositivos pequeños */
     }
 
-    .dropdown{
-        display: flex;
+    .dropdown {
+        display: flex; /* Asegura que el menú desplegable se muestre */
+        align-items: center;
+        justify-content: flex-end; /* Alinea el ícono del menú a la derecha */
     }
-    
-    
+
+    .cart_logo, .login {
+        display: none; /* Oculta los íconos del carrito y usuario en pantallas pequeñas */
+    }
+
+    .end_log_cart {
+        width: 100%; /* Ocupa el ancho completo del encabezado */
+        justify-content: flex-end; /* Alinea los elementos al final (derecha) */
+    }
+
+    /* Asegúrate de que el ícono del menú esté visible y correctamente posicionado */
+    .dropdown span {
+        display: block; /* Asegura que el ícono del menú sea visible */
+    }
 }
