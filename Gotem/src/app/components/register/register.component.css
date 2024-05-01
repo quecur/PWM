@@ -13,7 +13,7 @@
     justify-content: center;
     width: 100%;
     height:700px;
-    background: url(/images/fotos/login_back.webp);
+    background: url(../../../assets/white.jpg);
     background-position: center;
     background-size: cover;
 }

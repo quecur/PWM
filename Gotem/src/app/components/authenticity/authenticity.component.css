@@ -10,33 +10,43 @@ html, body {
     overflow-x: hidden; /* Evita el desplazamiento horizontal en cualquier caso */
 }
 
-.authenticity_section {
-    font-size: 20px;
-    color: black;
-}
 
 .autenticidad_title {
-    margin-top: 50px;
-    font-size: 40px;
-    font-weight: 500;
-    text-align: center; /* Centrar título para evitar desbordamientos por padding/margin */
+    width: 100%;
+    font-family: "Bebas Neue", sans-serif;
+    margin: 100px 0px 0px 0px;
+    font-size: 50px;
+    font-weight: 100;
+    color: rgb(255, 221, 2);
+    text-align:center;
 }
 
 .texto_autenticidad {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     width: 100%;
-    padding-left: 5%;  /* Ajustado para ser menos intrusivo */
-    padding-right: 5%;  /* Ajustado para ser menos intrusivo */
-    padding-top: 50px;
-    padding-bottom: 50px;
     justify-content: center;
+    font-family: "Inter", sans-serif;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 36%, rgba(136,0,255,1) 100%);
 }
 
 .texto_autenticidad_p {
-    padding-top: 30px;
+    padding: 10px 200px 50px 200px;
+    color: white;
+    text-align: justify;
+    font-size: 18px;
 }
 
 .imagen_legit {
-    display: flex;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-auto-rows: 400px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: 20px 20px;
+    height: 1200px;
+    width: 1000px;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
@@ -46,8 +56,10 @@ html, body {
 .authentic {
     width: 100%;
     height: auto;
-    border-radius: 0px;
+    border-radius: 15px;
+    align-self: end;
 }
+
 
 .autenticidad_container {
     width: 100%;
