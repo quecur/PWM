@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-
 .buy-container{
    display: grid;
    justify-content: center;
@@ -25,7 +24,6 @@
 .info-container{
    width: 100%;
    height: auto;
-   display: flexbox;
    box-sizing: border-box;
    flex-direction: column;
    align-items: center;
@@ -65,55 +63,89 @@
  }
 
  .size{
-    font-size: 20px;
-    font-weight: 600;
+   font-size: 20px;
+   font-weight: 600;
+}
+ 
+.tallas-contenedor {
+   display: flex; /* Cambio de grid a flex para un mejor control lineal */
+   flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas si es necesario */
+   justify-content: center; /* Centra los botones en el contenedor */
+   align-items: center; /* Alinea verticalmente los botones */
+   margin: 20px;
+   gap: 10px; /* Espacio entre los botones */
+}
+ 
+ .tallas-contenedor button {
+   height: 60px;
+   width: 60px;
+   font-size: 20px;
+   background-color: rgb(0, 0, 0);
+   color: white;
+   border: none; /* Eliminar borde por defecto */
+   border-radius: 8px; /* Bordes redondeados */
+   transition: background-color 0.3s, color 0.3s; /* Suavizar las transiciones */
  }
-
- .tallas-contenedor{
-      display: grid;
-      justify-content: center;
-      justify-items: center;
-      grid-auto-flow: dense;
-      grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-      gap: 10px;
- }
-
- .tallas-contenedor button{
-    height: 60px;
-    width: 60px;
-    font-size: 20px;
-    background-color: rgb(0, 0, 0);
- }
-
- .tallas-contenedor button:hover{
-    background-color: rgb(254, 254, 254);
-    color: black;
+ 
+ .tallas-contenedor button:hover {
+   background-color: rgb(254, 254, 254);
+   cursor: pointer;
+   color: black;
+   transform: translateY(-2px); /* Pequeño efecto de elevación al pasar el ratón */
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil para profundidad */
  }
 
  .product-footer {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    padding: 0 50px;
-}
-
-.price {
-    font-size: 20px;
-    margin-left: -50px;
-}
-
-.add-to-cart {
-    font-size: 20px;
-    padding: 10px;
-    background-color: black;
-    color: white;
-    height: auto;
-    width: 200px;
-}
-
-.add-to-cart:hover {
-   background-color: rgb(254, 254, 254);
-   color: black;
-}
+   width: 100%;
+   height: 100px;
+   display: flex;
+   justify-content: flex-end; /* Cambiado de 'space-between' a 'flex-end' */
+   align-items: center;
+   padding: 0 20px; /* Reducido para menos espacio alrededor */
+ }
+ 
+ .product-footer {
+   width: 100%;
+   height: 100px;
+   display: flex;
+   justify-content: space-between; /* Asegura que el precio y el botón estén en extremos opuestos */
+   align-items: center;
+ }
+ 
+ .product-footer {
+   width: 100%;
+   height: 100px;
+   display: flex;
+   justify-content: space-between; /* Mantiene los elementos en extremos opuestos */
+   align-items: center;
+   padding: 0 0px 0 0px; /* Aumenta el padding izquierdo y reduce el derecho */
+   margin-right: 10px; /* Añade un margen a la derecha para desplazar todo el contenido hacia la izquierda */
+ }
+ 
+ .price {
+   font-size: 20px;
+ }
+ 
+ .add-to-cart {
+   font-size: 20px;
+   padding: 10px;
+   background: black;
+   cursor: pointer;
+   color: white;
+   height: auto;
+   width: 200px;
+   border: 2px solid transparent; /* Borde inicialmente transparente */
+   transition: background 0.5s, box-shadow 0.3s, transform 0.3s, border-color 0.3s; /* Asegura una transición suave para el borde */
+ }
+ 
+ .add-to-cart:hover {
+   background-color: #000000;
+   color: #ffffff;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+   transform: translateY(-2px);
+ }
+ 
+ .add-to-cart:active {
+   transform: translateY(1px);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+ } 
