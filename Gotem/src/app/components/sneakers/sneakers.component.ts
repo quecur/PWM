@@ -17,17 +17,18 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './sneakers.component.css'
 })
 
-export class SneakersComponent implements OnInit{
+export class SneakersComponent implements OnInit {
   sneakers: Sneaker[] = [];
   brands: Brand[] = [];
 
   constructor(private dbservice: DbService, private snkloader: SnkloaderService, private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.loadbrands();
+    this.loadSneakers(); // Llama al método para cargar todas las zapatillas al iniciar la página
+    this.loadBrands();
   }
 
-  loadbrands(): void {
+  loadBrands(): void {
     const data = this.dbservice.getDataFromStorage('gs://gotem-2c6cc.appspot.com/brands.json');
     data.then((snk) => {
       snk.marcas.forEach((brand: any) => {
@@ -37,7 +38,14 @@ export class SneakersComponent implements OnInit{
   }
 
   changeBrand(brand: Brand): void {
-    const data = this.snkloader.loadSneakers(brand);
-    this.sneakers = data;
+    this.loadSneakers(brand); // Llama al método para cargar zapatillas de una marca específica
+  }
+
+  async loadSneakers(brand?: Brand): Promise<void> {
+    try {
+      this.sneakers = await this.snkloader.loadSneakers(brand); // Espera la resolución de la promesa
+    } catch (error) {
+      console.error('Error loading sneakers:', error);
+    }
   }
 }
