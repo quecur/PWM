@@ -12,13 +12,38 @@ html, body {
 
 
 .autenticidad_title {
-    width: 100%;
+    display: flex;
     font-family: "Bebas Neue", sans-serif;
     margin: 100px 0px 0px 0px;
     font-size: 50px;
     font-weight: 100;
+    width: 450px;
     color: rgb(255, 221, 2);
-    text-align:center;
+    justify-content: center;
+    align-items: center;
+    animation: vibration 4s infinite;
+    background: rgb(0,0,0);
+}
+
+.autenticidad_title label{
+    color: red;
+    font-size: 60px;
+    font-weight: 900;
+    margin: 0px 10px 0px 5px;
+}
+
+@keyframes vibration {
+    0% { transform: translateX(0) translateY(0); box-shadow: 0 0 10px rgb(242, 255, 0); }
+    25% { transform: translateX(-5px) translateY(-5px); box-shadow: -5px -5px 10px rgb(255, 242, 0); }
+    50% { transform: translateX(5px) translateY(5px); box-shadow: 5px 5px 10px rgb(255, 0, 0); }
+    75% { transform: translateX(-5px) translateY(-5px); box-shadow: -5px -5px 10px rgb(161, 0, 254); }
+    100% { transform: translateX(0) translateY(0); box-shadow: 0 0 10px rgb(166, 0, 255); }
+}
+
+.rarete{
+    height: 65px;
+    width: 65px;
+    justify-self: center;
 }
 
 .texto_autenticidad {
@@ -26,6 +51,7 @@ html, body {
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
+    height: auto;
     justify-content: center;
     font-family: "Inter", sans-serif;
     background: rgb(0,0,0);
@@ -33,82 +59,132 @@ html, body {
 }
 
 .texto_autenticidad_p {
-    padding: 10px 200px 50px 200px;
+    padding: 50px 200px 50px 200px;
     color: white;
     text-align: justify;
     font-size: 18px;
 }
-
+.imagen_legit img:hover,
+.imagen_legit div:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+    
 .imagen_legit {
     display: grid;
-    grid-auto-flow: dense;
-    grid-auto-rows: 400px;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    grid-template-columns: [first] 450px [line2] 500px [line3] 500px;
+    grid-template-rows: [row1-start] 300px [row2] 300px [row3];
     gap: 20px 20px;
-    height: 1200px;
-    width: 1000px;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
-    margin-bottom: 80px;
+    margin-bottom: 200px;
 }
 
-.authentic {
+.authentic_1 {
     width: 100%;
-    height: auto;
+    grid-column-start: first;
+    grid-column-end: line2;
+    grid-row-start: row1-start;
+    grid-row-end: row3;
+    height: 100%;
     border-radius: 15px;
     align-self: end;
 }
 
 
-.autenticidad_container {
+.authentic_2 {
     width: 100%;
+    height: 100%;
+    grid-column-start: line2;
+    grid-column-end: line3;
+    grid-row-start: row1-start;
+    grid-row-end: row2;
+    border-radius: 15px;
+    align-self: end;
+    background-color: black;
+    color: white;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    animation: border-animation 2s infinite;
+
 }
 
-.autenticidad_container2 {
-    width: 500px; /* Considera usar max-width para adaptabilidad */
-    height: 350px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    margin: 20px;
-    background: linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 10px) no-repeat,
-                linear-gradient(90deg, #dc27a7 0%, #0800ff 100%);
-    border-radius: 0px;
-    padding: 9px;
-    box-shadow: 10px 10px 10px;
-}
-
-.autenticidad_container2_title {
+.authentic_2 h1{
     font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    padding-top: 50px;
-    font-size: 32px;
+    font-size: 35px;
+    font-weight: 200;
+    margin: 0px;
+    color: rgb(255, 128, 0);
 }
 
-.texto_container2 {
+.authentic_2 p{
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
-    padding: 20px;
+    font-size: 18px;
 }
 
-@media only screen and (max-width: 650px) {
-    .autenticidad_container {
-        padding: 0px 20px;
-    }
-    .autenticidad_container2 {
-        width: 100%; /* Asegura que no sobrepase los límites en pantallas pequeñas */
-        height: auto;
-        padding-bottom: 50px;
-        margin: 10px 0px;
-    }
-    .texto_autenticidad {
-        padding-left: 5%;  /* Ajustado para pantallas pequeñas */
-        padding-right: 5%; /* Ajustado para pantallas pequeñas */
-    }
+.authentic_3 {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    align-self: end;
+    
+}
+
+
+.authentic_4 {
+    width: 100%;
+    height: 100%;
+    grid-column-start: line3;
+    grid-row-start: row1-start;
+    grid-row-end: row3;
+    border-radius: 15px;
+    align-self: end;
+}
+
+
+@keyframes border-animation {
+    0% { border: 2px solid rgb(255, 221, 0); }
+    50% { border: 2px solid rgb(187, 0, 255); }
+    100% { border: 2px solid rgb(255, 221, 0); }
+}
+.authentic_5, .authentic_6 {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    align-self: end;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: border-animation 2s infinite;
+}
+
+.authentic_5 h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 35px;
+    font-weight: 200;
+    margin: 0px;
+    color: rgb(255, 221, 0);
+}
+
+.authentic_6 h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 35px;
+    font-weight: 200;
+    margin: 0px;
+    color: rgb(2, 255, 82);
+}
+
+.authentic_5 p, .authentic_6 p{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-size: 18px;
 }
