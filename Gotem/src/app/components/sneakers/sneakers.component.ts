@@ -7,6 +7,7 @@ import { DbService } from '../../services/db.service';
 import { SnkloaderService } from '../../services/snkloader.service';
 import { Brand } from '../../interfaces/brands';
 import { HttpClient } from '@angular/common/http';
+import {Producto} from "../../interfaces/Producto";
 
 @Component({
   selector: 'app-sneakers',
@@ -28,23 +29,14 @@ export class SneakersComponent implements OnInit {
     this.loadBrands();
   }
   loadBuy(sneaker: Sneaker){
-        const nombreElement = sneaker.name;
-        const precioElement = sneaker.price;
-        const imagenElement = sneaker.image;
-        if (nombreElement && precioElement && imagenElement) {
-          const nombre = nombreElement || '';
-          const precio = precioElement|| '';
-          const imagen = imagenElement|| '';
-          if (typeof sessionStorage !== 'undefined') {
-            // sessionStorage está definido, puedes usarlo
-            sessionStorage.setItem('nombre_producto', nombre);
-            if (typeof precio === "string") {
-              sessionStorage.setItem('precio_producto', precio);
-            }
-            sessionStorage.setItem('imagen_producto', imagen);
-          } else {
-            console.error('sessionStorage no está definido');
-          }
+        const nuevoProducto: Producto = {
+          imagen: sneaker.image,
+          nombre: sneaker.name,
+          precio: sneaker.price,
+          cantidad: 1
+        };
+        if (nuevoProducto) {
+          sessionStorage.setItem('producto-temporal', JSON.stringify(nuevoProducto));
           window.location.href = '/buy';
         }
   }

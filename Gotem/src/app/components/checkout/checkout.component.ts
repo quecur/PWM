@@ -18,20 +18,28 @@ import { CommonModule } from "@angular/common";
 
 
 export class CheckoutComponent {
-
   productos: Producto[] = [];
-  Total: Number = 1000;
+  Total: number = 0;
   constructor() {
     if (typeof sessionStorage !== 'undefined') {
       const productosGuardados = sessionStorage.getItem('carrito_productos');
       if (productosGuardados) {
         this.productos = JSON.parse(productosGuardados);
       }
+      this.Total = this.total();
     }
+  }
+  total() : number{
+    let suma = 0;
+    for (let i = 0; i < this.productos.length; i++) {
+      suma += this.productos[i].precio * this.productos[i].cantidad; // Sumar cada elemento a la variable `suma`
+    }
+    return suma;
   }
   incrementarProducto(index: number): void {
     if (typeof sessionStorage !== 'undefined') {
       this.productos[index].cantidad++;
+      this.Total = this.Total + this.productos[index].precio;
       this.actualizarProductos();
     } else {
       console.error('sessionStorage no está definido');
@@ -41,6 +49,7 @@ export class CheckoutComponent {
     if (typeof sessionStorage !== 'undefined') {
       if (this.productos[index].cantidad > 1) {
         this.productos[index].cantidad--;
+        this.Total = this.Total - this.productos[index].precio;
         this.actualizarProductos();
       }
     } else {
@@ -51,6 +60,7 @@ export class CheckoutComponent {
 
   eliminarProducto(index: number): void {
     if (typeof sessionStorage !== 'undefined') {
+      this.Total = this.Total - (this.productos[index].precio * this.productos[index].cantidad);
       this.productos.splice(index, 1);
       this.actualizarProductos();
     } else {

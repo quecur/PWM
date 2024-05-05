@@ -4,11 +4,11 @@
   <!-- Usamos Angular *ngFor para manejar la lista de tallas -->
   <div class="buy-container">
     <div class="img-container">
-      <img [src]="imagen" alt="Product Image" id="product_img">
+      <img [src]="nuevoProducto?.imagen" alt="Product Image" id="product_img">
     </div>
     <div class="info-container">
       <div class="info-product">
-        <p class="shoe-name" id="shoe-name">{{ nombre }}</p>
+        <p class="shoe-name" id="shoe-name">{{ nuevoProducto?.nombre }}</p>
         <p class="branch">NIKE</p>
         <p class="details">The Nike Dunk sneakers are a classic silhouette with a modern twist. Featuring a durable leather upper and a cushioned midsole, these sneakers provide comfort and style for everyday wear. The iconic Nike Swoosh logo adorns the sides, while the padded collar and tongue offer added support. Whether you're hitting the streets or just hanging out, these kicks will elevate your look.</p>
         <p class="size">{{ selectedSize }}</p>
@@ -19,7 +19,7 @@
         </button>
       </div>
       <div class="product-footer">
-        <p class="price" id="price">{{ 'Price: ' + precio }}</p>
+        <p class="price" id="price">{{ 'Price: ' + nuevoProducto?.precio }} €</p>
         <button class="add-to-cart" (click)="addCart()">Add to cart</button>
       </div>
     </div>
