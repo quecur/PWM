@@ -3,27 +3,26 @@
 <!-- Panel de login -->
 <section class="container">
     <div class="wrapper">
-        <form action="" class="form">
+        <form action="" class="form" [formGroup]="formReg" (ngSubmit)="onSubmit()">
             <!-- Título del panel -->
             <h1>Login</h1>
 
-            <!-- Input del username -->
+            <!-- Input del email -->
             <div class="input_box">
-                <input type="text" placeholder="Username" required>
+                <input type="text" placeholder="Email" formControlName="email" required >
                 <i class='bx bxs-user' ></i>
             </div>
 
             <!-- Input de password -->
             <div class="input_box">
-                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Password"  formControlName="password" required>
                 <i class='bx bxs-lock-alt' ></i>
             </div>
 
             <!-- Recordar u olvidar contraseña -->
             <div class="remember-forgot">
                 <label><input type="checkbox">Remember me</label>
-                <a href="#" onclick="cargarContenido('/components/forgot-password.html','body_section')
-                ">Forgot password?</a>
+                <a href="#" onclick="">Forgot password?</a>
             </div>
             
             <!-- Botón de login -->
