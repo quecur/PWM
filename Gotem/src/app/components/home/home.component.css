@@ -177,3 +177,46 @@ html, body {
     width: 40px;
     margin-left: 10px;
 }
+
+@media only screen and (max-width: 877px) {
+    .why_buy{
+        padding: 50px 100px;
+    }
+
+    .home_intro{
+        height: 500px;
+    }
+
+    .home_text{
+        font-size: 40px;
+        width: 80%;
+        padding-left: 50px;
+    }
+
+    .why_text{
+        width: auto;
+    }
+
+    .gotem_home p{
+        margin: 0;
+    }
+
+    .gotem_home{
+        padding-left: 50px;
+        padding-right: 50px;
+    } 
+    
+}
+
+@media only screen and (max-width: 450px) {
+    .why_buy{
+        padding: 50px 50px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .ventaja{
+        width: auto;
+        height: auto;
+    }
+}
