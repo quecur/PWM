@@ -13,11 +13,8 @@ import { Producto} from "../../interfaces/Producto";
 })
 
 export class BuyComponent {
-  imagen: string | null = '';
-  nombre: string | null = '';
-  precio: string | null = '';
   nuevoProducto : Producto | null = null;
-
+  marca : string | null = null;
   selectedSize: string = 'Size (EU):'; // Inicializa la talla seleccionada
   tallas: string[] = ['41', '42', '43', '44', '45', '46'];
 
@@ -26,13 +23,21 @@ export class BuyComponent {
       let producto = sessionStorage.getItem('producto-temporal');
       if (producto) {
         this.nuevoProducto = JSON.parse(producto);
+        if(this.nuevoProducto){
+          const array = this.nuevoProducto.nombre.split(' ');
+          if(array.slice(0, 1)[0] != 'New'){
+            this.marca = array[0];
+          } else {
+            this.marca = array[0] + ' ' + array[1];
+          }
+
+        }
       }
     }
   }
 
   ngOnInit(): void {
     if (typeof window !== 'undefined' && window.sessionStorage) {
-      this.cargarBuy();
     }
   }
 
@@ -56,11 +61,6 @@ export class BuyComponent {
             window.location.href = '/checkout';
           }
         }
-  }
-  cargarBuy(): void {
-    this.imagen = sessionStorage.getItem('imagen_producto');
-    this.nombre = sessionStorage.getItem('nombre_producto');
-    this.precio = sessionStorage.getItem('precio_producto');
   }
 
   elegirTalla(tallaSeleccionada: string): void {

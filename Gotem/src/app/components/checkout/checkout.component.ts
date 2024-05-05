@@ -29,6 +29,30 @@ export class CheckoutComponent {
       this.Total = this.total();
     }
   }
+
+  updatePaymentFields() {
+    var credit_card = document.getElementById('credit-card-fields');
+    var paypal = document.getElementById('paypal-fields');
+    var banktransfer = document.getElementById('bank-transfer-fields');
+    var paymentOption = document.getElementById('payment-method') as HTMLInputElement;
+    var paymentAux = paymentOption.value;
+    if(credit_card && paypal && banktransfer && paymentOption) {
+      credit_card.style.display = 'none';
+      paypal.style.display = 'none';
+      banktransfer.style.display = 'none';
+      switch (paymentAux) {
+        case 'credit-card':
+          credit_card.style.display = 'block';
+          break;
+        case 'paypal':
+          paypal.style.display = 'block';
+          break;
+        case 'bank-transfer':
+          banktransfer.style.display = 'block';
+          break;
+      }
+    }
+  }
   total() : number{
     let suma = 0;
     for (let i = 0; i < this.productos.length; i++) {

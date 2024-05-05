@@ -43,7 +43,7 @@
 
         <div class="form-field">
           <label for="payment-method">Payment Method:</label>
-          <select id="payment-method" name="payment-method" required onclick="updatePaymentFields()">
+          <select id="payment-method" name="payment-method" required (change)="updatePaymentFields()">
             <option value="" selected disabled>Seleccione un método de pago</option>
             <option value="credit-card">Credit Card</option>
             <option value="paypal">PayPal</option>

@@ -33,6 +33,7 @@ export class SneakersComponent implements OnInit {
           imagen: sneaker.image,
           nombre: sneaker.name,
           precio: sneaker.price,
+          detalles: sneaker.description,
           cantidad: 1
         };
         if (nuevoProducto) {
