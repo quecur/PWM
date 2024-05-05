@@ -31,6 +31,11 @@
         </div>
 
         <a class="cart_logo" href="/checkout"><i class='bx bx-cart bx-tada-hover' style="font-size: 30px; color: white;"></i></a>
-        <a class="login" href="/login"><i class='bx bx-user bx-tada-hover' style="font-size: 30px; color: white"></i></a>
+        <a *ngIf="!mostrarNuevoEnlace" class="login" href="/login">
+            <i class='bx bx-user bx-tada-hover' style="font-size: 30px; color: white"></i>
+        </a>
+        <a *ngIf="mostrarNuevoEnlace" class="nuevo-enlace">
+            <i class='bx bx-log-in-circle' style="font-size: 30px; color: white" (click)="logout()"></i>
+        </a>
     </div>
 </div>
