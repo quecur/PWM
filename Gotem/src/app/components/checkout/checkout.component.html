@@ -9,14 +9,14 @@
             <img [src]="producto.imagen" alt="" class="product-image">
             <div class="counter">
               <button class="decrementar" (click)="decrementarProducto(i)">-</button>
-              <span class="valor">{{producto.cantidad}}</span>
+              <span class="valor">{{producto.cantidad}} </span>
               <button class="incrementar" (click)="incrementarProducto(i)">+</button>
               <button class="elim" (click)="eliminarProducto(i)">X</button>
             </div>
           </div>
           <div class="product-details">
             <h4>{{producto.nombre}}</h4>
-            <p>{{producto.precio}}</p>
+            <p>{{producto.precio}} €</p>
           </div>
         </div>
       </div>
