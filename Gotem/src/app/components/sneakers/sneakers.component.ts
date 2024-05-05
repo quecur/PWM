@@ -27,7 +27,27 @@ export class SneakersComponent implements OnInit {
     this.loadSneakers(); // Llama al método para cargar todas las zapatillas al iniciar la página
     this.loadBrands();
   }
-
+  loadBuy(sneaker: Sneaker){
+        const nombreElement = sneaker.name;
+        const precioElement = sneaker.price;
+        const imagenElement = sneaker.image;
+        if (nombreElement && precioElement && imagenElement) {
+          const nombre = nombreElement || '';
+          const precio = precioElement|| '';
+          const imagen = imagenElement|| '';
+          if (typeof sessionStorage !== 'undefined') {
+            // sessionStorage está definido, puedes usarlo
+            sessionStorage.setItem('nombre_producto', nombre);
+            if (typeof precio === "string") {
+              sessionStorage.setItem('precio_producto', precio);
+            }
+            sessionStorage.setItem('imagen_producto', imagen);
+          } else {
+            console.error('sessionStorage no está definido');
+          }
+          window.location.href = '/buy';
+        }
+  }
   loadBrands(): void {
     const data = this.dbservice.getDataFromStorage('gs://gotem-2c6cc.appspot.com/brands.json');
     data.then((snk) => {
