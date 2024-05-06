@@ -5,6 +5,7 @@
    justify-content: center;
    align-items: center;
    grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
+   font-family: "Inter", sans-serif;
 }
 
 .img-container{
