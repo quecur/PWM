@@ -9,6 +9,8 @@
   flex-direction: column; /* Asegura la disposición en fila */
   align-items: flex-start; /* Alinea los elementos al inicio, útil si tienen diferentes alturas */
   gap: 20px;
+  font-family: "Inter", sans-serif;
+
 }
 
 .title {
@@ -17,10 +19,11 @@
 
 .shopping-info {
   display: flex;
-  justify-content: center;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
   width: 100%;
-  height: 600px;
+  height: auto;
+  gap: 50px;
 }
 
 .cart-summary h3, .cart-summary h4 {
@@ -29,11 +32,14 @@
 }
 
 .products {
-  height: 100%; /* Ajusta la altura según sea necesario */
-  width: 40%;
+  height: 550px; /* Ajusta la altura según sea necesario */
+  width: 700px;
   overflow-y: auto; /* Habilita el desplazamiento vertical para la lista de productos */
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 20px;
 }
 
 .shopping-product {
@@ -43,15 +49,20 @@
 }
 
 .products-images {
-  height: 200px;
+  height: auto;
+  width: auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center; /* Alinea verticalmente la imagen y los controles del contador */
-  justify-content: start; /* Comienza los elementos al inicio del contenedor */
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .product-image {
-  height: 80%;
+  height: 200px;
+  width: 200px;
   margin-right: 75px; /* Espacio entre la imagen y el contador */
+  border-radius: 10px;
 }
 
 /* Estilos para los botones y el valor del contador */
@@ -75,6 +86,7 @@
 .counter {
   display: flex;
   align-items: center;
+  margin: 15px;
 }
 
 
@@ -87,21 +99,26 @@
 
 .product-details {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   font-size: 20px;
+  margin-bottom: 40px;
+  
 }
 
-.product-details p {
-  margin-right: 20px;
+.product-details p, .product-details h4 {
+  align-items: center;
+  margin: 0;
+  padding: 5px;
 }
 
 .cart-summary {
-  padding: 20px;
-  width: 30%;
-  margin-left: 40px;
+  padding: 40px;
+  width: 500px;
   height: auto;
-  border-left: 2px solid #ccc;
+  background-color: #e3e3e3;
+  border-radius: 10px;
   overflow-y: auto;
 }
 
@@ -119,8 +136,9 @@
 .form-field input, .form-field select {
   width: 95%;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 10px;
   border: 1px solid #ccc;
+  font-family: "Inter", sans-serif;
 }
 
 #credit-card-fields,
