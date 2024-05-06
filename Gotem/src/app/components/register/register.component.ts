@@ -22,7 +22,8 @@ export class RegisterComponent{
   formReg = this.fb.group({
     user: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6), Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/)]),
+    password: new FormControl('', [Validators.required, Validators.minLength(6), 
+      Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/)]),
     password2: new FormControl('', Validators.required)
   },{
     validators: this.passwordMatchValidator
