@@ -15,9 +15,10 @@ html, body {
     display: flex;
     font-family: "Bebas Neue", sans-serif;
     margin: 100px 0px 0px 0px;
-    font-size: 50px;
+    font-size: 2em;
     font-weight: 100;
-    width: 450px;
+    width: 10em;
+    height: auto;
     color: rgb(255, 221, 2);
     justify-content: center;
     align-items: center;
@@ -59,7 +60,7 @@ html, body {
 }
 
 .texto_autenticidad_p {
-    padding: 50px 200px 50px 200px;
+    padding: 5% 10% 5% 10%;
     color: white;
     text-align: justify;
     font-size: 18px;
@@ -72,119 +73,74 @@ html, body {
     
 .imagen_legit {
     display: grid;
-    grid-template-columns: [first] 450px [line2] 500px [line3] 500px;
-    grid-template-rows: [row1-start] 300px [row2] 300px [row3];
-    gap: 20px 20px;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 200px;
+    gap: 20px;
+    grid-auto-flow: dense;
+    grid-auto-rows: 450px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    margin: 50px;
 }
 
-.authentic_1 {
+.imagen_legit img {
     width: 100%;
-    grid-column-start: first;
-    grid-column-end: line2;
-    grid-row-start: row1-start;
-    grid-row-end: row3;
     height: 100%;
+    object-fit: cover;
     border-radius: 15px;
-    align-self: end;
 }
 
-
-.authentic_2 {
+.imagen_legit div {
     width: 100%;
     height: 100%;
-    grid-column-start: line2;
-    grid-column-end: line3;
-    grid-row-start: row1-start;
-    grid-row-end: row2;
+    background: rgb(0,0,0);
+    border: 2px solid rgb(255, 221, 0);
     border-radius: 15px;
-    align-self: end;
-    background-color: black;
+    animation: border-animation 2s infinite;
     color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    animation: border-animation 2s infinite;
-
+    align-items: center;
 }
 
 .authentic_2 h1{
+    font-size: 40px;
+    font-weight: 400;
     font-family: "Bebas Neue", sans-serif;
-    font-size: 35px;
-    font-weight: 200;
-    margin: 0px;
-    color: rgb(255, 128, 0);
+    color: #fc5d00;
 }
 
-.authentic_2 p{
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    font-size: 18px;
+.authentic_5 h1{
+    font-size: 40px;
+    font-weight: 400;
+    font-family: "Bebas Neue", sans-serif;
+    color: #0022fc;
 }
 
-.authentic_3 {
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    align-self: end;
-    
+.authentic_6 h1{
+    font-size: 40px;
+    font-weight: 400;
+    font-family: "Bebas Neue", sans-serif;
+    color: #3fc800;
 }
 
+.authentic_2 p,
+.authentic_5 p,
+.authentic_6 p{
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Inter", sans-serif;
+    text-align: justify;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}  
 
-.authentic_4 {
-    width: 100%;
-    height: 100%;
-    grid-column-start: line3;
-    grid-row-start: row1-start;
-    grid-row-end: row3;
-    border-radius: 15px;
-    align-self: end;
-}
+
 
 
 @keyframes border-animation {
     0% { border: 2px solid rgb(255, 221, 0); }
     50% { border: 2px solid rgb(187, 0, 255); }
     100% { border: 2px solid rgb(255, 221, 0); }
-}
-.authentic_5, .authentic_6 {
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    align-self: end;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: border-animation 2s infinite;
-}
-
-.authentic_5 h1{
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 35px;
-    font-weight: 200;
-    margin: 0px;
-    color: rgb(255, 221, 0);
-}
-
-.authentic_6 h1{
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 35px;
-    font-weight: 200;
-    margin: 0px;
-    color: rgb(2, 255, 82);
-}
-
-.authentic_5 p, .authentic_6 p{
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    font-size: 18px;
 }
