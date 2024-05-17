@@ -1,9 +1,0 @@
-------------------------
-| MOCKUPS - TeleportHQ |
-------------------------
-
-Acceder al siguente enlace para ver los mockups:
-
-	- https://play.teleporthq.io/projects/intelligent-fine-rhinoceros-c9sc3n
-
-IMPORTANTE! --> Una vez dentro del enlace es necesario clicar sobre la pantalla de "1920px" puesto que los mockups aún no son adaptables y no se aprecia claramente el contenido.
