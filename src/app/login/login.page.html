@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="login-card">
+      <div class="login-card-img" >
+        <img src="./../../assets/images/nkwall.jpg" alt="">
+      </div>
+      <div class="form" *ngIf="!isLoggedIn">
+        <h1>My Got'em</h1>
+        <div class="buttons">
+          <button [class.active]="isLoginSelected" (click)="selectLogin()">Login</button>
+          <button [class.active]="!isLoginSelected" (click)="selectRegister()">Register</button>
+        </div>
+
+        <form *ngIf="isLoginSelected" [formGroup]="loginForm" (ngSubmit)="signIn()" class="login-form">
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input formControlName="email" type="email" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+          </ion-item>
+          <ion-button type="submit" expand="block">Login</ion-button>
+        </form>
+        
+
+        <form *ngIf="!isLoginSelected" [formGroup]="registerForm" (ngSubmit)="register()" class="register-form">      
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input formControlName="email" type="email"></ion-input>
+          </ion-item>
+            <ion-item *ngIf="f['email'].invalid && (f['email'].dirty || f['email'].touched)">
+            <ion-text color="danger" *ngIf="f['email']?.errors?.['required']">Email is required</ion-text>
+            <ion-text color="danger" *ngIf="f['email'].errors && f['email'].errors['email']">Invalid email</ion-text>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+          </ion-item>
+            <ion-item *ngIf="f['password'].invalid && (f['password'].dirty || f['password'].touched)">
+            <ion-text color="danger" *ngIf="f['password'].errors?.['required']">Password is required</ion-text>
+            <ion-text color="danger" *ngIf="f['password'].errors?.['minlength']">Minimum of 6 characters</ion-text>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label position="floating">Confirm Password</ion-label>
+            <ion-input formControlName="confirmPassword" type="password"></ion-input>
+          </ion-item>
+            <ion-item *ngIf="f['confirmPassword'].invalid && (f['confirmPassword'].dirty || f['confirmPassword'].touched)">
+            <ion-text color="danger" *ngIf="f['confirmPassword'].errors?.['matching']">Passwords do not match</ion-text>
+          </ion-item>
+        
+          <ion-button expand="block" type="submit" [disabled]="registerForm.invalid" >Register</ion-button>
+        </form>
+      </div>
+      <div class="form2"*ngIf="isLoggedIn">
+        <img src="./../../assets/images/hola.png" alt="" style="width: 100px;">
+        <h1>
+          <span class="exclamation">¡</span> Welcome to Got'em <span class="exclamation">!</span> {{user.email}}</h1>
+        <h2>Check out your favorite sneakers</h2>
+        <button (click)="signOut()">Sign out</button>
+      </div>
+    </div>
+  </div>
+</ion-content>

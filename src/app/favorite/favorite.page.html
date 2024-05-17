@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" *ngIf="isLoggedIn">
+      <ion-button [routerLink]="['/favorite']">{{user.email}}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let favorite of favorites">
+      <ion-label>{{favorite.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

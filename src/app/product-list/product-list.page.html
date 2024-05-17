@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" *ngIf="isLoggedIn">
+      <ion-button [routerLink]="['/login']">{{user.email}}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="grid-container">
+    @for( product of products; track product){
+      <ion-card style="border-radius: 15px; color: white;" >
+        <img alt="Silhouette of mountains" [src]="product.image" style="cursor:pointer;">
+        <ion-card-header>
+          <ion-card-title>{{product.name}}</ion-card-title>
+          <ion-card-subtitle>{{product.price+"€"}}</ion-card-subtitle>
+          <ion-fab horizontal="end">
+            <ion-fab-button aria-label="Favorite" size="small" (click)="saveSnk(product)">
+              <ion-icon [name]="product.favorite ? 'heart' : 'heart-outline'"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+        </ion-card-header>
+        <ion-card-content style="text-align: justify; margin-bottom: 15px;">{{product.description}}</ion-card-content>
+      </ion-card>
+    }
+  </div>
+</ion-content>

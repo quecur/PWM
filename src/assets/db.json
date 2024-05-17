@@ -1,0 +1,43 @@
+{
+    "database":"favorites.db",
+    "version":1,
+    "encrypted":false,
+    "mode":"full",
+    "tables":[
+        {
+            "name":"favorites",
+            "columns":[
+                {
+                    "name":"id",
+                    "type":"INTEGER",
+                    "constraints":"PRIMARY KEY AUTOINCREMENT"
+                },
+                {
+                    "name":"name",
+                    "type":"TEXT",
+                    "constraints":"NOT NULL"
+                },
+                {
+                    "name":"description",
+                    "type":"TEXT",
+                    "constraints":"NOT NULL"
+                },
+                {
+                    "name":"price",
+                    "type":"INTEGER",
+                    "constraints":"NOT NULL"
+                },
+                {
+                    "name":"image",
+                    "type":"TEXT",
+                    "constraints":"NOT NULL"
+                },
+                {
+                    "name":"favorite",
+                    "type":"INTEGER",
+                    "constraints":"NOT NULL"
+                }
+            ]
+        }
+    ]
+}

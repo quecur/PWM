@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0,9,255);
+    background: linear-gradient(85deg, rgba(0,9,255,1) 0%, rgba(0,0,0,1) 100%);
+    
+}
+
+.login-card{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    background: rgb(255, 255, 255);
+}
+
+.login-card-img{
+    min-width: 350px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.form{
+    min-width: 350px;
+    width: 360px;
+    height: 530px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form2{
+    width: 360px;
+    height: 530px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 10px 10px 0px;
+    
+}
+
+.form2 h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.exclamation {
+    color: rgb(255, 204, 0); /* Cambia el color a rojo, puedes usar cualquier color aquí */
+    font-size: 4rem;
+}
+
+.form2 h2{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: rgb(154, 154, 154);
+}
+
+.form2 button{
+    height: 40px;
+    width: 30%;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: none;
+    background-color: rgb(4, 0, 255);
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+.form h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+    margin: 3rem 0 1rem 0;
+    animation: moveH1 2s infinite;
+}
+
+@keyframes moveH1 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.buttons {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    border: solid 2px rgb(4, 0, 255);
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.buttons button {
+    height: 40px;
+    width: 50%;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.buttons button.active {
+    background-color: rgb(4, 0, 255); /* Cambia el color de fondo cuando está seleccionado */
+    color: white; /* Cambia el color del texto cuando está seleccionado */
+}
+  
+.login-form{
+    width: 70%;
+    border:none;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+ion-button{
+    --background: rgb(0, 26, 255);
+    --color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    height: 40px;
+    width: 95%;
+    margin: 10px;
+}
+
+ion-item{
+    --background: rgb(0, 0, 0);
+    --color: white;
+    --border-radius: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+.register-form{
+    width: 70%;
+    border:none;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
