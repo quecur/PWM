@@ -16,17 +16,19 @@ export class FavoritePage implements OnInit {
   isLoggedIn: boolean = false;
   user: any;
   favorites: Product[] = [];
-  product: Product;
+  product: Product | undefined;
 
   constructor(private productService: ProductsService) { }
 
   ngOnInit() {
     this.productService.getUser().then((user) => {
-      this.isLoggedIn = !!user; // Si hay un usuario, isLoggedIn será true
+      this.isLoggedIn = !!user;
       this.user = user;
     }).catch((error) => {
       console.error('Error getting user:', error);
     });
   }
+
+  
 
 }
