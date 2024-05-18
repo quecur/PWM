@@ -5,8 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonMenuButton,
 import { Product, ProductsService } from '../services/products.service';
 import { AlertController } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
-import { SqliteService } from '../services/sqlite.service';
-import { CapacitorSQLite, capSQLiteChanges } from '@capacitor-community/sqlite';
+
 
 @Component({
   selector: 'app-product-list',
@@ -21,7 +20,7 @@ export class ProductListPage implements OnInit {
   isLoggedIn: boolean = false;
   user: any;
 
-  constructor(private productservice: ProductsService, private alertCtrl: AlertController, private sqlite: SqliteService) {
+  constructor(private productservice: ProductsService, private alertCtrl: AlertController) {
   }
 
   async ngOnInit() {
@@ -53,11 +52,5 @@ export class ProductListPage implements OnInit {
     });
     await alert.present();   
     
-    if(this.isLoggedIn){
-      if(product.favorite){
-        this.sqlite.create(product).then((response) =>{
-          console.log('Product added to favorites', response);
-        })}
-    }
   }
 }

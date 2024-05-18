@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Product, ProductsService } from '../services/products.service';
-import { SqliteService } from '../services/sqlite.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -19,7 +18,7 @@ export class FavoritePage implements OnInit {
   favorites: Product[] = [];
   product: Product;
 
-  constructor(private productService: ProductsService, private sqliteService: SqliteService) { }
+  constructor(private productService: ProductsService) { }
 
   ngOnInit() {
     this.productService.getUser().then((user) => {
