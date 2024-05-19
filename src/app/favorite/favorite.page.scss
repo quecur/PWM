@@ -2,6 +2,7 @@
 
 
 
+
 ion-button{
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
@@ -12,6 +13,57 @@ ion-button{
     height: 40px;
 }
 
+.fav-card{
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    border: solid 1px rgb(0, 0, 0);
+    margin: 10px;
+}
+
+
+
+
 ion-toolbar{
     --background: rgb(0, 0, 0);
 }
+
+.fav-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.fav-card-name{
+    margin: 20px;
+}
+
+.fav-card-name h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    color: #000000;
+}
+
+.fav-card-name h2{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 25px;
+    color: #686868;
+}
+
+.fav-card-name p{
+    max-width: 450px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    text-align: justify;
+}
+
+.fav-card-img{
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 10px;
+}
+

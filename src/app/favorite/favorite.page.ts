@@ -31,9 +31,13 @@ export class FavoritePage implements OnInit {
   }
 
   loadFavorites() {
-    
+    this.fvservice.readSneakers().subscribe((favorites) => {
+      favorites.forEach((favorite) => {
+        if (favorite.favorite == true){
+          this.favorites.push(favorite);
+        }
+      });
+    });
   }
-
-  
 
 }

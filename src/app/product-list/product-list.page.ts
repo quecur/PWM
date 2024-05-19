@@ -5,6 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonMenuButton,
 import { Product, ProductsService } from '../services/products.service';
 import { AlertController } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
+import { FavoriteService } from '../services/favorite.service';
 
 
 @Component({
@@ -20,18 +21,13 @@ export class ProductListPage implements OnInit {
   isLoggedIn: boolean = false;
   user: any;
 
-  constructor(private productservice: ProductsService, private alertCtrl: AlertController) {
+  constructor(private productservice: ProductsService, private fvservice: FavoriteService, private alertController: AlertController) {
   }
 
   async ngOnInit() {
-    this.productservice.getProducts().then((data) => {
-      data.adidas.forEach((product: Product) => {
-        product.favorite = false;
-      });
-      this.products = data.adidas;
-    }).catch((error) => {
-      console.error('Error al obtener productos:', error);
-    });
+    this.fvservice.readSneakers().subscribe((products) => {
+      this.products = products;
+    }); // Se obtienen los productos de la base de datos
     this.productservice.getUser().then((user) => {
       this.isLoggedIn = !!user; // Si hay un usuario, isLoggedIn será true
       this.user = user;
@@ -41,16 +37,15 @@ export class ProductListPage implements OnInit {
   }
 
   async saveSnk(product: Product) {
-    // Aquí se debería guardar y eliminar el producto en la base de datos SQLite
-    product.favorite = !product.favorite; 
-    const message = product.favorite ? 'Added to Favorites' : 'Removed from Favorites';
-    const alert = await this.alertCtrl.create({
-      header: product.name,
-      message: message,
-      buttons: ['OK'],
-      cssClass: 'custom-alert'
-    });
-    await alert.present();   
-    
-  }
+    const index = this.products.indexOf(product);
+    console.log(product.favorite);
+    product.favorite = !product.favorite;
+
+      if (product.favorite) {
+        await this.fvservice.createFavorite(index);
+      } else {
+        await this.fvservice.deleteFavorite(index);
+      }
+      this.products[index].favorite = product.favorite;
+    }
 }

@@ -12,7 +12,16 @@
 <ion-content [fullscreen]="true">
   <ion-list>
     <ion-item *ngFor="let favorite of favorites">
-      <ion-label>{{favorite.name}}</ion-label>
+      <div class="fav-card">
+        <div class="fav-card-img">
+            <img src="{{favorite.image}}" style="border-radius: 10px;" alt="">
+        </div>
+        <div class="fav-card-name">
+          <h1>{{favorite.name}}</h1>
+          <h2>{{favorite.price+'€'}}</h2>
+          <p>{{favorite.description}}</p>
+        </div>
+      </div>
     </ion-item>
   </ion-list>
 </ion-content>

@@ -6,18 +6,18 @@
       <ion-list>
         <ion-menu-toggle>
           <ion-item lines="" button [routerLink]="['/main']" class="seccion">
-            <ion-label>Home</ion-label>
+            <ion-label style="color: white;">Home</ion-label>
           </ion-item>
           <ion-item lines="" button [routerLink]="['/product-list']" class="seccion">
-            <ion-label>Sneakers</ion-label>
+            <ion-label style="color: white;">Sneakers</ion-label>
           </ion-item>
           @if(isLoggedIn==true){
             <ion-item lines="" button [routerLink]="['/favorite']" class="seccion">
-              <ion-label>Favorites</ion-label>
+              <ion-label style="color: white;">Favorites</ion-label>
             </ion-item>
           }
           <ion-item lines="none" button [routerLink]="['/login']" class="seccion">
-            <ion-label>My Got'em</ion-label>
+            <ion-label style="color: white;">My Got'em</ion-label>
           </ion-item>
         </ion-menu-toggle>
       </ion-list>

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { getDatabase, ref, set} from "firebase/database";
+import { getDatabase, ref, set, get, child, update, push, remove} from "firebase/database";
+import { Product } from './products.service';
+import { Observable, from, map } from 'rxjs';
 const database = getDatabase();
 
 
@@ -11,27 +13,34 @@ export class FavoriteService {
   constructor() { 
   }
 
-  createFavorite(snkId: string, name: string, description: string, price: number, image:string, favorite: boolean) {
-    set(ref(database, 'adidas/' + snkId), {
-      snkId: snkId,
-      name: name,
-      description: description,
-      price: price,
-      image: image,
-      favorite: favorite
+  createFavorite(index: number) {
+    const dbRef = ref(database, 'adidas/'+index);
+    update(dbRef, {favorite: true}).then(() => {
+      console.log("Data updated successfully! --> true");
     });
   }
 
-  readFavorite(snkId: string) {
-    return ref(database, 'adidas/');
+  deleteFavorite(index: number) {
+    const dbRef = ref(database, 'adidas/'+index);
+    update(dbRef, {favorite: false}).then(() => {
+      console.log("Data updated successfully! --> false");
+    });
   }
 
-  readSneakers(){
-    return ref(database, 'adidas/'); 
-  }
-
-
-  deleteFavorite(snkId: string) {
-    set(ref(database, 'favs/' + snkId), null);
+  readSneakers(): Observable<Product[]> {
+    const dbRef = ref(database);
+    return from(get(child(dbRef, 'adidas/'))).pipe(
+      map(snapshot => {
+        const snks: Product[] = [];
+        if (snapshot.exists()) {
+          snapshot.forEach(childSnapshot => {
+            snks.push(childSnapshot.val());
+          });
+        } else {
+          console.log("No data available");
+        }
+        return snks;
+      })
+    );
   }
 }

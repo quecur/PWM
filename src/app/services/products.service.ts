@@ -33,11 +33,6 @@ export class ProductsService {
     this.auth = getAuth(this.app);
   }
 
-  async getProducts(): Promise<any> {
-    const storageRef = ref(this.storage, 'adidas.json');
-    const url = await getDownloadURL(storageRef);
-    return firstValueFrom(this.httpClient.get(url));
-  }
 
   async register(email: string, password: string): Promise<any> {
     return createUserWithEmailAndPassword(this.auth, email, password);
