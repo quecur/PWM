@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonButtons, IonMenuButton, IonImg, IonIcon, IonMenuToggle } from '@ionic/angular/standalone';
@@ -24,6 +24,12 @@ export class MainPage implements OnInit {
     }).catch((error) => {
       console.error('Error getting user:', error);
     });
+  }
+  @ViewChild(IonContent, { static: false }) content: IonContent | undefined;
+  scrollDown(pixels: number){
+    if(this.content){
+      this.content.scrollByPoint(0, 900, 1000); // (x, y, duration in ms)
+    }
   }
 
 }
