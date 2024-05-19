@@ -2,9 +2,8 @@ import { Injectable, inject } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { initializeApp } from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
-import { getStorage, ref, getDownloadURL } from 'firebase/storage';
+import { getStorage } from 'firebase/storage';
 import { HttpClient } from '@angular/common/http';
-import { firstValueFrom } from 'rxjs';
 
 export interface Product {
   id: string;

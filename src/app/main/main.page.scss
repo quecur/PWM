@@ -18,6 +18,11 @@ html, body {
   background-size: cover;
 }
 
+.ventaja h3 {
+  color: black;
+  font-weight: bold;
+}
+
 .home_text {
   color: white;
   font-size: 65px;
@@ -146,7 +151,6 @@ ion-button{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
 
 }
 
@@ -187,7 +191,7 @@ ion-button{
   text-align: center;
   padding: 40px 20px;
   font-family: "Inter";
-  box-shadow: 5px 5px 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
 }
 

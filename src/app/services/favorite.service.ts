@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { getDatabase, ref, set, get, child, update, push, remove} from "firebase/database";
+import { getDatabase, ref, get, child, update} from "firebase/database";
 import { Product } from './products.service';
 import { Observable, from, map } from 'rxjs';
 const database = getDatabase();
