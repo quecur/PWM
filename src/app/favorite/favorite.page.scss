@@ -12,10 +12,16 @@ ion-button{
     height: 40px;
 }
 
+
+
+ion-item{
+    --background: rgb(255, 255, 255);
+}
+
+
 .fav-card{
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    border: solid 1px rgb(0, 0, 0);
     margin: 10px;
 }
 
