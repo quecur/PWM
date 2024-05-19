@@ -55,3 +55,8 @@ ion-content{
 ion-toolbar{
     --background: rgb(0, 0, 0);
 }
+
+ion-alert.custom-alert {
+    color: white;
+    background-color: rgb(0, 0, 0);
+}

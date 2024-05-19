@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button menu="m1"></ion-menu-button>
+      <ion-menu-button menu="m1" style="color: white;"></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -15,12 +15,12 @@
       <div class="form" *ngIf="!isLoggedIn">
         <h1>My Got'em</h1>
         <div class="buttons">
-          <button [class.active]="isLoginSelected" (click)="selectLogin()">Login</button>
-          <button [class.active]="!isLoginSelected" (click)="selectRegister()">Register</button>
+          <button [class.active]="isLoginSelected" (click)="selectLogin()" style="color: white;">Login</button>
+          <button [class.active]="!isLoginSelected" (click)="selectRegister()" style="color: white;">Register</button>
         </div>
 
         <form *ngIf="isLoginSelected" [formGroup]="loginForm" (ngSubmit)="signIn()" class="login-form">
-          <ion-item>
+          <ion-item lines="normal">
             <ion-label position="floating">Email</ion-label>
             <ion-input formControlName="email" type="email" required></ion-input>
           </ion-item>
@@ -67,7 +67,7 @@
         <h1>
           <span class="exclamation">¡</span> Welcome to Got'em <span class="exclamation">!</span> {{user.email}}</h1>
         <h2>Check out your favorite sneakers</h2>
-        <button (click)="signOut()">Sign out</button>
+        <button (click)="signOut()" style="color: white;">Sign out</button>
       </div>
     </div>
   </div>

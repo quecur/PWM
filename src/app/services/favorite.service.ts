@@ -12,7 +12,7 @@ export class FavoriteService {
   }
 
   createFavorite(snkId: string, name: string, description: string, price: number, image:string, favorite: boolean) {
-    set(ref(database, 'favs/' + snkId), {
+    set(ref(database, 'adidas/' + snkId), {
       snkId: snkId,
       name: name,
       description: description,
@@ -23,8 +23,13 @@ export class FavoriteService {
   }
 
   readFavorite(snkId: string) {
-    return ref(database, 'favs/' + snkId);
+    return ref(database, 'adidas/');
   }
+
+  readSneakers(){
+    return ref(database, 'adidas/'); 
+  }
+
 
   deleteFavorite(snkId: string) {
     set(ref(database, 'favs/' + snkId), null);
