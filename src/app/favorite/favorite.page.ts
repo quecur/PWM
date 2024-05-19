@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Product, ProductsService } from '../services/products.service';
 import { RouterLink } from '@angular/router';
+import { FavoriteService } from '../services/favorite.service';
 
 @Component({
   selector: 'app-favorite',
@@ -16,17 +17,21 @@ export class FavoritePage implements OnInit {
   isLoggedIn: boolean = false;
   user: any;
   favorites: Product[] = [];
-  product: Product | undefined;
 
-  constructor(private productService: ProductsService) { }
+  constructor(private productService: ProductsService, private fvservice: FavoriteService) { }
 
   ngOnInit() {
     this.productService.getUser().then((user) => {
       this.isLoggedIn = !!user;
       this.user = user;
+      this.loadFavorites();
     }).catch((error) => {
       console.error('Error getting user:', error);
     });
+  }
+
+  loadFavorites() {
+    
   }
 
   

@@ -4,15 +4,22 @@
       <ion-menu-button menu="m1"></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="end" *ngIf="isLoggedIn">
-      <ion-button [routerLink]="['/favorite']">{{user.email}}</ion-button>
+      <ion-button [routerLink]="['/login']">{{user.email}}</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-item *ngFor="let favorite of favorites">
-      <ion-label>{{favorite.name}}</ion-label>
-    </ion-item>
-  </ion-list>
+  @if(isLoggedIn){
+    <ion-list>
+      <ion-item *ngFor="let favorite of favorites">
+        <ion-label>{{favorite.name}}</ion-label>
+      </ion-item>
+    </ion-list>
+  }@else{
+    <div>
+      <h1>Please, log in to see your favorites sneakers</h1>
+    </div>
+  }
+  
 </ion-content>
